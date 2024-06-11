@@ -861,6 +861,45 @@ p{
 }
 
 @media(481px <= width <= 767px){
+    #list{
+        display: none;
+    }
+    #head{
+        width: 100%;
+        gap: .5rem;
+    }
+    #contact{
 
+        width: 100%;
+    }
+    #data{
+        align-items: center;
+    }
+    .buttons{
+        justify-content: center;
+    }
+    #info{
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 6vw;
+        align-items: center;
+        align-content: center;
+    }
+    #soft-lang{
+        flex-direction: column;
+        align-content: center;
+    }
+    #about{
+        width: 80vw;
+        padding-bottom: 2rem;
+    }
+    #project-boxes-Container{
+        width: 80vw;
+    }
+    .project{
+        flex: none;
+    }
 
 }
