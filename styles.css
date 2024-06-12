@@ -778,8 +778,6 @@ p{
 
 /*// Media Query ////*/
 
-/* @media(600px <= width < 750px) */
-
 @media (1201px <= width <= 1400px){
     #about, #project-boxes-Container, .project-boxes, #section-Tecnology,
     #soft-lang, #experience, #education, #data-contact{
@@ -793,6 +791,9 @@ p{
     }
     .img-social-media-btns{
         width: 2.5vw;
+    }
+    #head{
+        padding: .5rem 0 .5rem 0;
     }
 }
 
@@ -849,7 +850,7 @@ p{
         margin-top: 1rem;
     }
     .style-btns{
-        height: 4vh;
+        height: 5vh;
     }
     .img-social-media-btns{
         width: 4vw;
@@ -869,7 +870,6 @@ p{
         gap: .5rem;
     }
     #contact{
-
         width: 100%;
     }
     #data{
@@ -895,11 +895,210 @@ p{
         width: 80vw;
         padding-bottom: 2rem;
     }
-    #project-boxes-Container{
+    .project{ 
+        flex: none;
+        width: 60vw;
+        height: 30vh;
+        padding-bottom: 1.5vh;
+    }
+    #labels button:first-of-type{
+        margin-left: 0;
+    }
+    #labels{
+        gap: 1.5rem;
+    }
+    .project img{
+        width: 100%;
+        height: auto;
+    }
+    .project-boxes{
+        width: 60vw;
+    }
+    .tec-img{
+        width: 60px;
+    }
+    #description-tec-container{
+        height: auto;   
+        margin-bottom: none;
+        padding: .5rem;
+    }
+    .soft-box ul li{
+        padding: .3rem; 
+        font-size: 1rem;
+    }
+    .soft-box ul{
+        flex-wrap: wrap;
+    }
+    #soft-lang{
+       padding-top: 2rem;
+       padding-bottom: 2rem;
+    }
+    #experience, #education, #data-contact, #soft-lang, 
+    #section-Tecnology,#project-boxes-Container{
         width: 80vw;
     }
-    .project{
-        flex: none;
+    .label-date{
+        font-size: .8rem;
+        display: none;
     }
-
+    .bts-Contact{
+        margin-top: 0;
+        gap: 2.5vw;
+    }
+    .img-social-media-btns{
+        width: 8vw;
+    }
+    .style-btns{
+        height: 6vh;
+    }
+    #labels>label{
+      display: none;
+    }
+}
+@media(width<=480px){
+    #experience, #education, #data-contact, #soft-lang, 
+    #section-Tecnology,#project-boxes-Container{
+        width: 80vw;
+    }
+    #list{
+        display: none;
+    }
+    #head{
+        width: 100%;
+        gap: 1rem;
+    }
+    #contact{
+        width: 100%;
+    }
+    #data{
+        align-items: center;
+    }
+    .data-btns{
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .buttons{
+        gap: 1rem;
+    }
+    #data h1{
+        font-size: 2.2rem;
+    }
+    .buttons{
+        justify-content: center;
+    }
+    #btn-Mail{
+        width: 85%;
+        justify-content: center;
+    }
+    #info{
+        margin-top: 7rem;
+        margin-bottom: 3rem;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 6vw;
+        align-items: center;
+        align-content: center;
+    }
+    #soft-lang{
+        flex-direction: column;
+        align-content: center;
+    }
+    #about{
+        width: 80vw;
+        padding-bottom: 2rem;
+    }
+    .project{ 
+        flex: none;
+        width: 70vw;
+        height: 30vh;
+        padding-bottom: 1.5vh;
+    }
+    #labels button:first-of-type{
+        margin-left: 0;
+    }
+    #labels{
+        gap: 1.5rem;
+    }
+    .project img{
+        width: 100%;
+        height: auto;
+    }
+    .project-boxes{
+        width: 60vw;
+    }
+    .tec-img{
+        width: 40px;
+    }
+    .tec-Box{
+        padding:0;
+    }
+    #description-tec-container{
+        height: auto;   
+        margin-bottom: none;
+        padding: .5rem;
+    }
+    .soft-box ul li{
+        padding: .3rem; 
+        font-size: 1rem;
+    }
+    .soft-box ul{
+        flex-wrap: wrap;
+        margin: 0px;
+        gap: .5rem;
+    }
+    #soft-lang{
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+    }
+    .label-date{
+        font-size: .8rem;
+        display: none;
+    }
+    .bts-Contact{
+        margin-top: 0;
+        gap: 2.5vw;
+    }
+    .img-social-media-btns{
+        width: 8vw;
+    }
+    .style-btns{
+        height: 5vh;
+    }
+    #labels>label{
+      display: none;
+    }
+    #data-contact{
+        padding: 0;
+    }
+    #translate-btn{
+        margin-right: 1.5rem;
+    }
+    #title-Left{
+        margin-left: 1.5rem;
+    }
+    #section-Tecnology{
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    #experience{
+        padding-top: 2rem;
+    }
+    #education{
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+    #data-contact{
+        padding-top: 1rem;
+    }
+    .project h3{
+        font-size: 1.5rem;
+    }
+}
+@media(width<=375px){
+    .style-btns{
+        height: 6vh;
+    }
+    .project{
+        height: 40vh;
+    }
 }
