@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    
-    
     const body = document.body
     const nightBtn = document.getElementById('night-btn') /*General Nightshift Style*/
     const header = document.getElementById('head') /*header*/
@@ -29,26 +27,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const msjMail = document.querySelectorAll('.msj-mail')
     const title = document.getElementById('title-job')
     
-   
-     
-    // class btns ///
-    class Button {
+    class Button {   // class btns ///
         constructor(clas, name, action){
             this.clas = clas;
             this.name = name;
             this.action = action
-            this.buttonElement = document.querySelector(`.${this.clas}`)
-            this.addEvent();
-            
-        }
-        //Metodo para ir a una pagina web 
+            this.buttonElement = document.querySelector(`.${this.clas}`)}
         addEvent(){
             if (this.buttonElement) {
-                this.buttonElement.addEventListener('click', this.action);
-            }}
-        
+                this.buttonElement.addEventListener('click', this.action); }}
         nightMode(){
-            
             var variable = localStorage.getItem('nightModeActivated')
             variable = (variable === 'false' || variable === null) ? 'true' : 'false'
             nightBtn.addEventListener('click', ()=>{
@@ -56,16 +44,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 nightModeClass()
                 localStorage.setItem('nightModeActivated', variable)
                 variable = variable === 'false'? 'true':'false'
-            })    
-        }    
-
+            })}    
         openPageLinkedin(){
             window.open('https://www.linkedin.com/in/guillermo-e-garcia-vega-342947266', '_blank')
         }
         openPageGit(){
-            window.open('https://github.com/MemoDamus', '_blank')
-        }
-
+            window.open('https://github.com/MemoDamus', '_blank')}
         copyMail(event){
             navigator.clipboard.writeText('gvmemo.93@gmail.com');    
             const msj=document.querySelector('.message-Mail');
@@ -73,9 +57,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             msj.style.top = `${event.clientY + 7}px`;
             msj.style.display='block';
             setTimeout(()=>{
-            msj.style.display='none';}, 1200)
-        }
-    
+            msj.style.display='none';}, 1200)}
         copyMail2(event){
             navigator.clipboard.writeText('gvmemo.93@gmail.com');    
             const msj2=document.querySelector('.mail');
@@ -83,18 +65,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
             msj2.style.top = `${event.clientY + 7}px`;
             msj2.style.display='block';
             setTimeout(()=>{
-            msj2.style.display='none';}, 1200)
-        }
-        
+            msj2.style.display='none';}, 1200)}
         downloadCv(){
             const urlPDF = "./CV/Guillermo_Garcia_CV.pdf";
             const linkDescarga = document.createElement('a');
             linkDescarga.href = urlPDF;
             linkDescarga.target = '_blank';
             linkDescarga.click();}
-        
         prjDescriptionAction(){
-            
             const botones = document.querySelectorAll(".btn-description");
             const prjDescription = document.querySelectorAll(".box-description");
             const imgDots = document.querySelectorAll(".img-dots");
@@ -134,9 +112,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
-    //Buttons Colecction 
-
-    const buttons = [
+    const buttons = [  //Buttons Colecction 
         new Button('btns-Link', 'Button Link', Button.prototype.openPageLinkedin),
         new Button('btns-Link2', 'Button Link', Button.prototype.openPageLinkedin),
         new Button('btns-Mail', 'Button Mail', Button.prototype.copyMail),
@@ -190,10 +166,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
             He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
             Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`
-        }
-
-    ]
-
+        }]
     const txtTecTecnologyEnglish = [
         {
             name:'html',
@@ -224,12 +197,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
             He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
             Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`
-        }
-
-    ]
-
+        }]
     tecDescription.textContent = txtTecTecnology[4].txt
-
     imgTec.forEach((imgTec, index)=>{
 
         imgTec.addEventListener('mouseover',()=>{
@@ -275,11 +244,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             clearTimeout(timerIn)
         })
     })
-
-   //////// IDIOMA /////////////
-
-   
-
     ///Info en txt ///
     const spanishCV = {
         menu:{
@@ -442,9 +406,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
         section7:'Contact'
     }
-    
-    
-    
     const printDataCV=(obj)=>{
         
         const spacesToPrint = document.querySelectorAll('.print-spanish-value')
@@ -462,7 +423,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }  
         })
     }
-
     const arrValuesCV=(obj)=>{
         let values = []
         for(const key in obj){
@@ -478,7 +438,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
         return values
     }
-
     const toggleClass =(id,className)=>{
         if(id.length>1){
             id.forEach((data)=>{
@@ -488,7 +447,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             id.classList.toggle(className)
         }
     }
-
     const nightModeClass=()=>{
         toggleClass(imgDarkMode,'prueba')
         toggleClass(imgLightMode, 'display-block')
@@ -517,11 +475,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         toggleClass(body, 'night-mode')
     }
 
-
     if(localStorage.getItem('nightModeActivated') === 'true'){
         nightModeClass()
     }
-    
+
     printDataCV(spanishCV)
     localStorage.getItem('translate') === 'ingles' ? printDataCV(englishCV) : printDataCV(spanishCV)
 })
