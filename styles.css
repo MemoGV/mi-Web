@@ -297,7 +297,7 @@ p{
     align-items: center;
     overflow: hidden;
     gap: .3rem;
-    padding-bottom: 2.5vh;
+    padding-bottom: 2vh;
     flex: 1;
     transition: all 200ms ease-in-out;
 
@@ -343,16 +343,11 @@ p{
 }
 
 #labels>label{
-    padding: .3rem .6rem .3rem .5rem;
+    padding: .2rem .7rem .2rem .5rem;
     border-radius: 1rem;
-    background-color: rgb(2, 15, 20, .7);
-    color: #74E291;
-    transition: color 200ms ease-in-out;
+    background-color: rgb(238, 238, 238, 0.6);
+    color: #053b50;
     font-style: italic;
-
-    &:hover{
-        color: yellow;
-    }
 }
 
 #labels button{
@@ -465,12 +460,11 @@ p{
 
 .soft-box ul li{
     list-style: none;
-    background-color:#053B50;
-    padding: .3rem 1rem .3rem 1rem;
+    background-color:rgb(238, 238, 238, .6);
+    padding: .2rem .8rem .2rem .6rem;
     border-radius: 1rem;
-    color: #EEEEEE;
+    color: #053b50;
     font-size: 1.1rem;
-    box-shadow: 0px 0px 1rem #4b975f;
     cursor: pointer;
     font-style: italic;
     
