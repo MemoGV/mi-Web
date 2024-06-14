@@ -278,21 +278,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
    //////// IDIOMA /////////////
 
-   const englishDesc = document.getElementById('eng-List')
-   const createMsj = document.createElement('div');
-
-   englishDesc.addEventListener('mouseover', ()=>{
-        const aparece = document.getElementById('idioma-List')
-        createMsj.classList.add('prueba')
-        createMsj.textContent = 'Nivel de Ingles B2 Certificado'
-        aparece.appendChild(createMsj)
-        createMsj.classList.remove('prueba')
-   })
-
-   englishDesc.addEventListener('mouseout', ()=>{
-
-        createMsj.classList.add('prueba')
-   })
+   
 
     ///Info en txt ///
     const spanishCV = {
@@ -334,7 +320,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             language:{
                 title:'Idiomas',
                 Lang:'Español',
-                Lang2:'Ingles'
+                Lang2:'Ingles B2 Certificado'
             },
             skills:{
                 title:'Habilidades',

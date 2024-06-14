@@ -20,7 +20,7 @@ font-family:SairaCondense, sans-serif;
 background-color:#EEEEEE;
 color: #053B50;
 height: auto;
-transition: all 300ms ease-out !important;
+/*transition: all 300ms ease-out !important;*/
 }
 
 h2, h3{
@@ -123,7 +123,7 @@ p{
 }
 #menu ul li{
     list-style: none;
-    transition: 300ms all;
+    transition: 300ms scale ease-in-out;
 
     &:hover{
         scale:1.1;
@@ -138,7 +138,7 @@ p{
     &:hover{
         color: #041b25;
         text-shadow: 0px 0px 1rem #cccc;
-        transition: all 300ms ease-out;
+        transition: color 300ms ease-out, text-shadow 300ms ease-out;
     }
 }
 
@@ -181,16 +181,15 @@ p{
     &:hover{
         scale:1.3;
         box-shadow: 0px 0px 2rem #bbbbbb;
-        transition-duration: 300ms;
+        transition-duration:scale 300ms, box-shadow 300ms;
     }
 }
 
 #profile-photo-id{
     transition: scale 100ms ease-in-out;
-
     &:hover{
         scale: 1.2;
-        transition-duration: 300ms;
+        transition-duration: scale 300ms;
     }
 }
 
@@ -208,7 +207,7 @@ p{
     cursor: pointer;
     margin-right: 1rem;
     margin-top: .7rem;
-    transition: all 300ms ease-in-out;
+    transition: scale 300ms ease-in-out, background-color 200ms ease-in-out, box-shadow 300ms ease-in-out;
 
     &:hover{
         scale: 1.1;
@@ -299,7 +298,7 @@ p{
     gap: .3rem;
     padding-bottom: 2vh;
     flex: 1;
-    transition: all 200ms ease-in-out;
+    transition: scale 200ms ease-in-out, box-shadow 300ms ease-in-out;
 
     &:hover{
         scale: 1.07;
@@ -535,7 +534,7 @@ p{
 
 .img-dots-blue, .img-up-blue{
     filter: brightness(0%) saturate(200%) hue-rotate(200deg);
-    transition: all 300ms ease-in-out;
+    transition: scale 300ms ease-in-out, box-shadow 300ms ease-in-out;
     border-radius: 2rem;
     &:hover{
         scale:1.2;
@@ -589,7 +588,8 @@ p{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, scale 300ms ease-in-out, 
+    background-color 300ms ease-in-out, box-shadow 300ms ease-in-out;
 
     &:hover{
 
@@ -640,12 +640,12 @@ p{
     background-color: #100f29;
     border: 1px solid #74e291 ;
     box-shadow: none;
-    transition: all 300ms ease-out !important;
+    transition: background-color 300ms ease-out !important;
 
     &:hover{
 
         background-color: #EEEEEE !important;
-        transition: all 300ms ease-out !important
+        transition: 300ms ease-out !important
     }
 }
 .night-mode-translate-btn{
@@ -658,7 +658,7 @@ p{
     &:hover{
 
         background-color: #100f29 !important;
-        transition: all 300ms ease-out;
+        transition: 300ms ease-out;
     }
 
 }
@@ -678,13 +678,12 @@ p{
         text-shadow: 0px 0px 1rem #1b7533 !important;
         transition: all 300ms ease-out !important;
     }
-    transition: all 300ms ease-out !important;
+    transition: 300ms ease-out !important;
 }
 
 .night-mode-Photo{
      box-shadow: 0px 0px 1rem #01141c;
-     transition: all 300ms ease-out !important;
-}
+     transition: all 300ms ease-out !important;}
 
 .night-mode-prj-background{
     background: linear-gradient(to top, #100f29, #4f4d8a, #100f29)!important;
@@ -696,7 +695,8 @@ p{
 }
 .night-mode-prj{
     background-color: #4a487d !important;
-    transition: all 100ms ease-out 
+    color: white !important; 
+    transition: all 100ms ease-out
 }
 
 .night-mode-tec-box{
