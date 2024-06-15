@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const body = document.body
-    const nightBtn = document.getElementById('night-btn') /*General Nightshift Style*/
-    const header = document.getElementById('head') /*header*/
-    const nightBtnStyle = document.getElementById('night-btn') /* night btn*/
+    const nightBtn = document.getElementById('night-btn') 
+    const header = document.getElementById('head') 
+    const nightBtnStyle = document.getElementById('night-btn') 
     const sectionProjectsBackground = document.getElementById('section-projects-background')
     const softTittle = document.getElementById('soft-lang')
     const contact = document.getElementById('contact')
     const photoProfile = document.getElementById('photo-profile')
     const translateBtn = document.getElementById('translate-btn')
     const mailBtn = document.getElementById('btn-Mail')
-    const menuA = document.querySelectorAll('.menu-A') /*list As Menu*/
+    const menuA = document.querySelectorAll('.menu-A') 
     const prjBox = document.querySelectorAll('.project')
     const tecBox = document.querySelectorAll('.tec-Box')
     const tecImg = document.querySelectorAll('.tec-img')
@@ -43,29 +43,36 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 
                 nightModeClass()
                 localStorage.setItem('nightModeActivated', variable)
-                variable = variable === 'false'? 'true':'false'
-            })}    
-        openPageLinkedin(){
-            window.open('https://www.linkedin.com/in/guillermo-e-garcia-vega-342947266', '_blank')
-        }
-        openPageGit(){
-            window.open('https://github.com/MemoDamus', '_blank')}
-        copyMail(event){
-            navigator.clipboard.writeText('gvmemo.93@gmail.com');    
-            const msj=document.querySelector('.message-Mail');
-            msj.style.left= `${event.clientX + 7}px` ;
-            msj.style.top = `${event.clientY + 7}px`;
-            msj.style.display='block';
-            setTimeout(()=>{
-            msj.style.display='none';}, 1200)}
-        copyMail2(event){
-            navigator.clipboard.writeText('gvmemo.93@gmail.com');    
-            const msj2=document.querySelector('.mail');
-            msj2.style.left= `${event.clientX + 7}px` ;
-            msj2.style.top = `${event.clientY + 7}px`;
-            msj2.style.display='block';
-            setTimeout(()=>{
-            msj2.style.display='none';}, 1200)}
+                variable = variable === 'false'? 'true':'false'})}    
+
+        openPage(){
+            const btnsPage = document.querySelectorAll('.btns-page')
+            btnsPage.forEach(btn =>{
+    
+                btn.addEventListener('click',()=>{
+                    if(btn.id === 'btn-github-contact' || btn.id === 'btn-Github'){ 
+                        window.open('https://github.com/MemoGV', '_blank')
+                        
+                    }else if(btn.id === 'btn-linkedin-contact' || btn.id === 'linkedin'){
+                        window.open('https://www.linkedin.com/in/guillermo-e-garcia-vega-342947266', '_blank')}})})}
+        copyMail(){
+            const btnsMail = document.querySelectorAll('.btns-mail')
+            const msjData=document.querySelector('.message-Mail')
+            const msjContact = document.querySelector('.mail')
+
+            btnsMail.forEach(btn =>{
+            btn.addEventListener('click',(event)=>{
+            let msj
+                if(btn.id === 'btn-mail-contact'){
+                    msj = msjContact}
+                else{
+                    msj = msjData}
+                navigator.clipboard.writeText('gvmemo.93@gmail.com')
+                msj.style.left= `${event.clientX + 7}px` ;
+                msj.style.top = `${event.clientY + 7}px`;
+                msj.style.display='block';
+                setTimeout(()=>{
+                    msj.style.display='none';}, 1200)})})}
         downloadCv(){
             const urlPDF = "./CV/Guillermo_Garcia_CV.pdf";
             const linkDescarga = document.createElement('a');
@@ -79,52 +86,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const imgUp = document.querySelectorAll(".img-up");
 
             botones.forEach((boton, index)=>{
-
                 boton.addEventListener('click', ()=>{
 
                 if(prjDescription[index].style.display === 'block'){
                     prjDescription[index].style.display = 'none'
                     imgDots[index].style.display = 'block'
-                    imgUp[index].style.display = 'none'
-                }else{
+                    imgUp[index].style.display = 'none'}
+                else{
                     prjDescription[index].style.display ='block'
                     imgDots[index].style.display = 'none'
-                    imgUp[index].style.display = 'block'
-                    
-                     }
-                })
-            })
+                    imgUp[index].style.display = 'block'}})})}
 
-        }
         traduction(){
-            
           translateBtn.addEventListener('click',()=>{
-
                 if(title.textContent === 'Desarrollador Web'){
                     printDataCV(englishCV)  
                     localStorage.setItem('translate', 'ingles')
                 }else{
                     printDataCV(spanishCV)
-                    localStorage.setItem('translate', 'spanish')
-                }
-                
-          })
-        }
+                    localStorage.setItem('translate', 'spanish')}})}
     }
 
-    const buttons = [  //Buttons Colecction 
-        new Button('btns-Link', 'Button Link', Button.prototype.openPageLinkedin),
-        new Button('btns-Link2', 'Button Link', Button.prototype.openPageLinkedin),
-        new Button('btns-Mail', 'Button Mail', Button.prototype.copyMail),
-        new Button('btns-Mail2', 'Button Mail', Button.prototype.copyMail2),
+    const buttons = [ 
+        new Button('btns-Mail', 'Button Mail', Button.prototype.copyMail()),
         new Button('btns-Cv', 'Button Cv', Button.prototype.downloadCv),
         new Button('btns-Cv2', 'Button Cv', Button.prototype.downloadCv),
-        new Button('btns-Github', 'Button GitHub', Button.prototype.openPageGit),
-        new Button('btns-GitHub2', 'Button GitHub', Button.prototype.openPageGit),
+        new Button('btns-openpage', 'Button Open Page', Button.prototype.openPage()),
         new Button('btn-description-prj', 'Button Project', Button.prototype.prjDescriptionAction()),
         new Button('night-btn','Button Nightshift', Button.prototype.nightMode()),
-        new Button('translate-btn', 'Button Translator', Button.prototype.traduction())
-    ]
+        new Button('translate-btn', 'Button Translator', Button.prototype.traduction())]
     buttons.forEach( boton => boton.addEvent())
     
     ///////////// Tecnologys /////////////////
@@ -140,64 +130,54 @@ document.addEventListener('DOMContentLoaded', ()=>{
             txt:`Tengo experiencia en HTML y estoy familiarizado con su sintaxis, puedo crear estructuras de páginas web
             utilizando diferentes tipos de etiquetas. Además, puedo aplicar atributos y utilizar elementos 
             de formato como listas, y estilos con CSS mediante clases y selectores. 
-            El HTML de esta página web es un ejemplo de lo que sé hacer.`
-        },
+            El HTML de esta página web es un ejemplo de lo que sé hacer.`},
         {
             name:'css',
             txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, así como la creación de diseños responsivos.
             Además sigo aprendiendo técnicas avanzadas de diseño, animaciones y posicionamiento en CSS, para poder crear 
-            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`
-        },
+            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`},
         {
             name:'javascript',
             txt:`Tengo conocimiento general en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje,
              como variables, funciones, bucles y condicionales. Además, estoy familiarizado con el uso de objetos, 
-             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`
-        },
+             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`},
         {
             name:'github',
             txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
             realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos de desarrollo de software 
-            utilizando estas herramientas de control de versiones`
-        },
+            utilizando estas herramientas de control de versiones`},
         {
             name:'default',
             txt:`Hola, te platico un poco de lo que sé y como es que lo sé.
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
             He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
-            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`
-        }]
+            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`}]
     const txtTecTecnologyEnglish = [
         {
             name:'html',
             txt:`jajajajajaja  CSS mediante clases y selectores. 
-            El HTML de esta página web es un ejemplo de lo que sé hacer.`
-        },
+            El HTML de esta página web es un ejemplo de lo que sé hacer.`},
         {
             name:'css',
             txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, así como la creación de diseños responsivos.
             Además sigo aprendiendo técnicas avanzadas de diseño, animaciones y posicionamiento en CSS, para poder crear 
-            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`
-        },
+            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`},
         {
             name:'javascript',
             txt:`Tengo conocimiento general en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje,
              como variables, funciones, bucles y condicionales. Además, estoy familiarizado con el uso de objetos, 
-             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`
-        },
+             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`},
         {
             name:'github',
             txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
             realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos de desarrollo de software 
-            utilizando estas herramientas de control de versiones`
-        },
+            utilizando estas herramientas de control de versiones`},
         {
             name:'default',
             txt:`Hola, te platico un poco de lo que sé y como es que lo sé.
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
             He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
-            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`
-        }]
+            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`}]
     tecDescription.textContent = txtTecTecnology[4].txt
     imgTec.forEach((imgTec, index)=>{
 
@@ -209,8 +189,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if(title.textContent === 'Desarrollador Web'){
                 ok = txtTecTecnology[index]
             }else{
-                ok = txtTecTecnologyEnglish[index]
-            }
+                ok = txtTecTecnologyEnglish[index]}
 
             timerIn = setTimeout(()=>{
 
@@ -226,12 +205,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
                         break;
                     case 3:
                         tecDescription.textContent = ok.txt;
-                        break;
-                }
-                tecDescription.style.opacity = 1
-            },500)  
-            clearTimeout(timerOut)
-        })
+                        break;}
+                tecDescription.style.opacity = 1},500)  
+            clearTimeout(timerOut)})
 
         imgTec.addEventListener('mouseout', ()=>{
 
@@ -241,9 +217,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 tecDescription.style.opacity = 1
                 
             },1000)
-            clearTimeout(timerIn)
-        })
-    })
+            clearTimeout(timerIn)})})
     ///Info en txt ///
     const spanishCV = {
         menu:{
@@ -262,24 +236,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
             programming and to apply my analytical and problem-solving skills to develop innovative 
             solutions. I am committed to my professional growth and am constantly seeking new learning 
             and development opportunities. I am always open to connecting with industry professionals 
-            and exploring collaborations on exciting projects.`
-        },
+            and exploring collaborations on exciting projects.`},
         section2:{
             title:'Proyectos',
             firstProject:{
                 prjName:'nombre 1',
-                description:`descripcion proyecto 1.`
-            },
+                description:`descripcion proyecto 1.`},
             secondProject:{
                 prjName:'nombre 2',
-                description:`descripcion proyiecto 2`
-            }
-        },
+                description:`descripcion proyiecto 2`}},
         section3:{
             title:'Tecnoclogias',
             subTitle:'Conocimientos',
-            subTitle1:'Aprendiendo'
-        },
+            subTitle1:'Aprendiendo'},
         section4:{
             language:{
                 title:'Idiomas',
@@ -291,9 +260,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 skill:'Trabajo en equipo',
                 skill1: 'Adapatabilidad', 
                 skill2:'Atencion al detalle', 
-                skill3:'Paciencia'
-            }
-        },
+                skill3:'Paciencia'}},
         section5:{
             workHistory:{
                 title:'Experiencia',
@@ -301,9 +268,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 fecha:'Sep 2019 - Actualmente',
                 descripcion:`Trabajo en una variedad de proyectos, desde la edición de videos promocionales hasta la creación de contenido visual para campañas 
                 de marketing en redes sociales. Mi objetivo es combinar mi experiencia en ingeniería con mi habilidad para contar historias a través de 
-                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`
-            }
-        },
+                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`}},
         section6:{  
             education:{
                 title:'Educacion',
@@ -314,17 +279,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     Durante el tiempo en mi maestria realice los siguientes objetivos. Realización de un análisis exhaustivo del mercado local y global para 
                     identificar oportunidades y desafíos. Desarrollo de un estudio técnico detallado para calcular los costos de infraestructura y el 
                     retorno de la inversión. Determinación de la viabilidad económica del proyecto mediante análisis financiero y proyecciones. Investigación 
-                    exhaustiva del mercado global para evaluar la expansión potencial del servicio fuera de nuestra área local.`
-                },
+                    exhaustiva del mercado global para evaluar la expansión potencial del servicio fuera de nuestra área local.`},
                 secondDegree:{
                     degree:'Ingeniera Industrial',
                     date:'Ago 2012 - Dic 2017',
-                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`  
-                }  
-            }    
-        },
-        section7:'Contacto'
-    }
+                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`}}},
+        section7:'Contacto'}
     
     const englishCV = {
         menu:{
@@ -343,38 +303,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
             programming and to apply my analytical and problem-solving skills to develop innovative 
             solutions. I am committed to my professional growth and am constantly seeking new learning 
             and development opportunities. I am always open to connecting with industry professionals 
-            and exploring collaborations on exciting projects.`
-        },
+            and exploring collaborations on exciting projects.`},
         section2:{
             title:'Projects',
             firstProject:{
                 prjName:'name 1',
-                description:`project description 1.`
-            },
+                description:`project description 1.`},
             secondProject:{
                 prjName:'name 2',
-                description:`project description 2`
-            }
-        },
+                description:`project description 2`}},
         section3:{
             title:'Technology',
             subTitle:'Knowledge',
-            subTitle1:'Learning'
-        },
+            subTitle1:'Learning'},
         section4:{
             language:{
                 title:'Languages',
                 Lang:'Spanish',
-                Lang2:'English'
-            },
+                Lang2:'English'},
             skills:{
                 title:'Softkills',
                 skill:'Teamwork',
                 skill1: 'Adaptability', 
                 skill2:'Attencion to Details', 
-                skill3:'Patience'
-            }
-        },
+                skill3:'Patience'}},
         section5:{
             workHistory:{
                 title:'Work Experience',
@@ -382,9 +334,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 fecha:'Sep 2019 - Currently',
                 descripcion:`Trabajo en una variedad de proyectos, desde la edición de videos promocionales hasta la creación de contenido visual para campañas 
                 de marketing en redes sociales. Mi objetivo es combinar mi experiencia en ingeniería con mi habilidad para contar historias a través de 
-                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`
-            }
-        },
+                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`}},
         section6:{  
             education:{
                 title:'Education',
@@ -400,12 +350,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 secondDegree:{
                     degree:'Ingeniera Industrial',
                     date:'Ago 2012 - Dic 2017',
-                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`  
-                }  
-            }    
-        },
-        section7:'Contact'
-    }
+                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`  }  }    },
+        section7:'Contact'}
     const printDataCV=(obj)=>{
         
         const spacesToPrint = document.querySelectorAll('.print-spanish-value')
@@ -419,8 +365,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         spacesToPrint.forEach((div, index)=>{
             
             if(index<arrValues.length){
-                div.textContent = arrValues[index]
-            }  
+                div.textContent = arrValues[index]}  
         })
     }
     const arrValuesCV=(obj)=>{
@@ -432,21 +377,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 if(typeof obj[key] === 'object' && obj[key] !==null){
                     values.push(...arrValuesCV(obj[key]))
                 }else{
-                    values.push(obj[key])
-                }
-            }
-        }
-        return values
-    }
+                    values.push(obj[key])}
+            }}
+        return values}
     const toggleClass =(id,className)=>{
         if(id.length>1){
             id.forEach((data)=>{
-                data.classList.toggle(className)
-            })
+                data.classList.toggle(className)})
         }else{
-            id.classList.toggle(className)
-        }
-    }
+            id.classList.toggle(className)}}
     const nightModeClass=()=>{
         toggleClass(imgDarkMode,'prueba')
         toggleClass(imgLightMode, 'display-block')
@@ -474,15 +413,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         toggleClass(msjMail, 'night-mode-msj-copy-mail')
         toggleClass(body, 'night-mode')
     }
-
     if(localStorage.getItem('nightModeActivated') === 'true'){
-        nightModeClass()
-    }
-
+        nightModeClass()}
     printDataCV(spanishCV)
     localStorage.getItem('translate') === 'ingles' ? printDataCV(englishCV) : printDataCV(spanishCV)
 })
-
-
-
 
