@@ -276,7 +276,7 @@ p{
 }
 
 .project-boxes{
-    width: 45vw;
+    width: 40vw;
     margin: 0px auto;
     padding-bottom: 5vh;
     display: flex;
@@ -342,7 +342,7 @@ p{
 }
 
 #labels>label{
-    padding: .2rem .7rem .2rem .5rem;
+    padding: 0rem .7rem 0rem .5rem;
     border-radius: 1rem;
     background-color: rgb(238, 238, 238, 0.6);
     color: #053b50;
@@ -362,7 +362,7 @@ p{
     font-size: 1.2rem;
 }
 #labels button:first-of-type{
-    margin-left: 4vw;
+    margin-left: 2.5rem;
 }
 
 

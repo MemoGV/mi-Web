@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 nightModeClass()
                 localStorage.setItem('nightModeActivated', variable)
                 variable = variable === 'false'? 'true':'false'})}    
-
         openPage(){
             const btnsPage = document.querySelectorAll('.btns-page')
             btnsPage.forEach(btn =>{
@@ -96,14 +95,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     prjDescription[index].style.display ='block'
                     imgDots[index].style.display = 'none'
                     imgUp[index].style.display = 'block'}})})}
-
         traduction(){
           translateBtn.addEventListener('click',()=>{
                 if(title.textContent === 'Desarrollador Web'){
                     printDataCV(englishCV)  
+                    translateBtn.textContent = 'EN/ES'
                     localStorage.setItem('translate', 'ingles')
                 }else{
                     printDataCV(spanishCV)
+                    translateBtn.textContent = 'ES/EN'
                     localStorage.setItem('translate', 'spanish')}})}
     }
 
@@ -116,8 +116,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         new Button('night-btn','Button Nightshift', Button.prototype.nightMode()),
         new Button('translate-btn', 'Button Translator', Button.prototype.traduction())]
     buttons.forEach( boton => boton.addEvent())
-    
-    ///////////// Tecnologys /////////////////
 
     const imgTec = document.querySelectorAll(".tec-img")
     const tecDescription = document.getElementById('description-tec')
@@ -128,56 +126,44 @@ document.addEventListener('DOMContentLoaded', ()=>{
         {
             name:'html',
             txt:`Tengo experiencia en HTML y estoy familiarizado con su sintaxis, puedo crear estructuras de páginas web
-            utilizando diferentes tipos de etiquetas. Además, puedo aplicar atributos y utilizar elementos 
-            de formato como listas, y estilos con CSS mediante clases y selectores. 
-            El HTML de esta página web es un ejemplo de lo que sé hacer.`},
+            utilizando diferentes tipos de etiquetas. El HTML de esta página web es un ejemplo de lo que sé hacer.`},
         {
             name:'css',
-            txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, así como la creación de diseños responsivos.
-            Además sigo aprendiendo técnicas avanzadas de diseño, animaciones y posicionamiento en CSS, para poder crear 
-            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`},
+            txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, sigo aprendiendo técnicas avanzadas de diseño, 
+            animaciones y posicionamiento en CSS, para poder crear mejores interfaces web atractivas y funcionales.`},
         {
             name:'javascript',
-            txt:`Tengo conocimiento general en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje,
-             como variables, funciones, bucles y condicionales. Además, estoy familiarizado con el uso de objetos, 
-             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`},
+            txt:`Tengo una base solida de conocimiento en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje
+             y estoy familiarizado con el uso de objetos, sus métodos y propiedades.`},
         {
             name:'github',
             txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
-            realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos de desarrollo de software 
-            utilizando estas herramientas de control de versiones`},
+            realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos.`},
         {
             name:'default',
             txt:`Hola, te platico un poco de lo que sé y como es que lo sé.
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
-            He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
+            He explorado diferentes cursos en línea, páginas web, y practicado con proyectos.
             Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`}]
     const txtTecTecnologyEnglish = [
         {
             name:'html',
-            txt:`jajajajajaja  CSS mediante clases y selectores. 
-            El HTML de esta página web es un ejemplo de lo que sé hacer.`},
+            txt:`Experienced in HTML and familiar with its syntax, capable of creating web page structures using various tags. The HTML of this web page exemplifies my skills.`},
         {
             name:'css',
-            txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, así como la creación de diseños responsivos.
-            Además sigo aprendiendo técnicas avanzadas de diseño, animaciones y posicionamiento en CSS, para poder crear 
-            mejores interfaces web atractivas y funcionales que se ajusten de manera óptima a diferentes dispositivos.`},
+            txt:`Knowledgeable in CSS, including design with Flexbox and Grid, continually learning advanced techniques in design, animations,
+             and positioning to create more attractive and functional web interfaces.`},
         {
             name:'javascript',
-            txt:`Tengo conocimiento general en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje,
-             como variables, funciones, bucles y condicionales. Además, estoy familiarizado con el uso de objetos, 
-             incluyendo la creación, y manipulación de objetos, el uso de métodos y propiedades.`},
+            txt:`Solid foundation in JavaScript, with an understanding of fundamental concepts and familiarity with using objects, their methods, and properties.`},
         {
             name:'github',
-            txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
-            realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos de desarrollo de software 
-            utilizando estas herramientas de control de versiones`},
+            txt:`Familiar with using Git and GitHub, including managing repositories, tracking changes, handling branches, merging code, and collaborating efficiently on projects.`},
         {
             name:'default',
-            txt:`Hola, te platico un poco de lo que sé y como es que lo sé.
-            Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
-            He explorado diferentes cursos en línea, páginas web, libros y vídeos en YouTube.
-            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`}]
+            txt:`Hello, let me share what I've learned and how. Over the past year, I've dedicated myself to self-studying HTML, CSS, and JavaScript. I've explored different online courses,
+             websites, and practiced with projects. Explore more about my skills in each technology by hovering over them.`}]
+    
     tecDescription.textContent = txtTecTecnology[4].txt
     imgTec.forEach((imgTec, index)=>{
 
@@ -353,39 +339,38 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`  }  }    },
         section7:'Contact'}
     const printDataCV=(obj)=>{
-        
         const spacesToPrint = document.querySelectorAll('.print-spanish-value')
         const arrValues = arrValuesCV(obj)
 
         if((spacesToPrint.length<arrValues.length)){
             console.error('No hay suficientes Divs para mostrar todos los Valores')
-            return
-        }
-        
+            return}
         spacesToPrint.forEach((div, index)=>{
-            
             if(index<arrValues.length){
-                div.textContent = arrValues[index]}  
-        })
-    }
+                div.style.opacity = 0
+                div.textContent = arrValues[index]
+                setTimeout(()=>{
+                    div.style.opacity = 1
+                }, 300)
+                }})}
+
     const arrValuesCV=(obj)=>{
         let values = []
         for(const key in obj){
-
             if(obj.hasOwnProperty(key)){
-               
                 if(typeof obj[key] === 'object' && obj[key] !==null){
-                    values.push(...arrValuesCV(obj[key]))
-                }else{
-                    values.push(obj[key])}
+                    values.push(...arrValuesCV(obj[key]))}
+                else{values.push(obj[key])}
             }}
         return values}
+
     const toggleClass =(id,className)=>{
         if(id.length>1){
             id.forEach((data)=>{
                 data.classList.toggle(className)})
         }else{
             id.classList.toggle(className)}}
+            
     const nightModeClass=()=>{
         toggleClass(imgDarkMode,'prueba')
         toggleClass(imgLightMode, 'display-block')
@@ -411,8 +396,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         toggleClass(styleBtnsContact, 'night-btns-social-media')
         toggleClass(styleDataBtns, 'night-btns-data')
         toggleClass(msjMail, 'night-mode-msj-copy-mail')
-        toggleClass(body, 'night-mode')
-    }
+        toggleClass(body, 'night-mode')}
+        
     if(localStorage.getItem('nightModeActivated') === 'true'){
         nightModeClass()}
     printDataCV(spanishCV)
