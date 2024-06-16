@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const imgDarkMode = document.querySelector('.img-night-btn')
     const msjMail = document.querySelectorAll('.msj-mail')
     const title = document.getElementById('title-job')
+    const imgTec = document.querySelectorAll(".tec-img")
+    const tecDescription = document.getElementById('description-tec')
     
     class Button {   // class btns ///
         constructor(clas, name, action){
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         traduction(){
           translateBtn.addEventListener('click',()=>{
                 if(title.textContent === 'Desarrollador Web'){
-                    printDataCV(englishCV)  
+                    printDataCV(englishCV) 
                     translateBtn.textContent = 'EN/ES'
                     localStorage.setItem('translate', 'ingles')
                 }else{
@@ -116,95 +118,70 @@ document.addEventListener('DOMContentLoaded', ()=>{
         new Button('night-btn','Button Nightshift', Button.prototype.nightMode()),
         new Button('translate-btn', 'Button Translator', Button.prototype.traduction())]
     buttons.forEach( boton => boton.addEvent())
-
-    const imgTec = document.querySelectorAll(".tec-img")
-    const tecDescription = document.getElementById('description-tec')
+    
+    const xd =()=>{
     var timerOut
     var timerIn
     
     const txtTecTecnology = [
-        {
-            name:'html',
+        {   name:'html',
             txt:`Tengo experiencia en HTML y estoy familiarizado con su sintaxis, puedo crear estructuras de páginas web
             utilizando diferentes tipos de etiquetas. El HTML de esta página web es un ejemplo de lo que sé hacer.`},
-        {
-            name:'css',
+        {   name:'css',
             txt:`Poseo conocimientos en CSS, incluyendo diseño con flexbopx y grid, sigo aprendiendo técnicas avanzadas de diseño, 
             animaciones y posicionamiento en CSS, para poder crear mejores interfaces web atractivas y funcionales.`},
-        {
-            name:'javascript',
+        {   name:'javascript',
             txt:`Tengo una base solida de conocimiento en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje
              y estoy familiarizado con el uso de objetos, sus métodos y propiedades.`},
-        {
-            name:'github',
+        {   name:'github',
             txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
-            realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos.`},
-        {
-            name:'default',
-            txt:`Hola, te platico un poco de lo que sé y como es que lo sé.
-            Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
-            He explorado diferentes cursos en línea, páginas web, y practicado con proyectos.
-            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`}]
+            realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos.`}]
     const txtTecTecnologyEnglish = [
-        {
-            name:'html',
+        {   name:'html',
             txt:`Experienced in HTML and familiar with its syntax, capable of creating web page structures using various tags. The HTML of this web page exemplifies my skills.`},
-        {
-            name:'css',
+        {   name:'css',
             txt:`Knowledgeable in CSS, including design with Flexbox and Grid, continually learning advanced techniques in design, animations,
              and positioning to create more attractive and functional web interfaces.`},
-        {
-            name:'javascript',
+        {   name:'javascript',
             txt:`Solid foundation in JavaScript, with an understanding of fundamental concepts and familiarity with using objects, their methods, and properties.`},
-        {
-            name:'github',
-            txt:`Familiar with using Git and GitHub, including managing repositories, tracking changes, handling branches, merging code, and collaborating efficiently on projects.`},
-        {
-            name:'default',
-            txt:`Hello, let me share what I've learned and how. Over the past year, I've dedicated myself to self-studying HTML, CSS, and JavaScript. I've explored different online courses,
-             websites, and practiced with projects. Explore more about my skills in each technology by hovering over them.`}]
-    
-    tecDescription.textContent = txtTecTecnology[4].txt
+        {   name:'github',
+            txt:`Familiar with using Git and GitHub, including managing repositories, tracking changes, handling branches, merging code, and collaborating efficiently on projects.`}]
+     
     imgTec.forEach((imgTec, index)=>{
-
         imgTec.addEventListener('mouseover',()=>{
-            
             tecDescription.style.opacity = 0
-            var ok
+            var data
 
             if(title.textContent === 'Desarrollador Web'){
-                ok = txtTecTecnology[index]
+                data = txtTecTecnology[index]
             }else{
-                ok = txtTecTecnologyEnglish[index]}
+                data = txtTecTecnologyEnglish[index]}
 
             timerIn = setTimeout(()=>{
 
                 switch(index){
                     case 0: 
-                        tecDescription.textContent = ok.txt; 
+                        tecDescription.textContent = data.txt; 
                         break;
                     case 1:
-                        tecDescription.textContent = ok.txt;
+                        tecDescription.textContent = data.txt;
                         break;
                     case 2:
-                        tecDescription.textContent = ok.txt;
+                        tecDescription.textContent = data.txt;
                         break;
                     case 3:
-                        tecDescription.textContent = ok.txt;
+                        tecDescription.textContent = data.txt;
                         break;}
                 tecDescription.style.opacity = 1},500)  
             clearTimeout(timerOut)})
 
         imgTec.addEventListener('mouseout', ()=>{
-
             tecDescription.style.opacity = 0
             timerOut = setTimeout(()=>{
-                tecDescription.textContent = txtTecTecnology[4].txt
-                tecDescription.style.opacity = 1
-                
-            },1000)
+                tecDescription.style.opacity = 1},1000)
             clearTimeout(timerIn)})})
-    ///Info en txt ///
+    }
+
     const spanishCV = {
         menu:{
             first:'Sobre Mi', 
@@ -214,15 +191,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         title:'Desarrollador Web',
         section1:{
             title:'Sobre Mi',
-            description:`I am an industrial engineer with a master's degree in industrial engineering, 
-            enthusiastic about technology, film, and video games. Throughout my career, 
-            I have gained experience in image design and video editing for social media platforms. 
-            Currently, I am focusing my energy on learning programming with the goal of transitioning 
-            into a career as a programmer. I am excited to explore new opportunities in the field of 
-            programming and to apply my analytical and problem-solving skills to develop innovative 
-            solutions. I am committed to my professional growth and am constantly seeking new learning 
-            and development opportunities. I am always open to connecting with industry professionals 
-            and exploring collaborations on exciting projects.`},
+            description:`Ingeniero industrial con experiencia en edición de videos para plataformas digitales y un fuerte interés en el cine, los deportes y la tecnología.
+            Durante el último año, me he dedicado a estudiar programación con la meta de desarrollar una carrera en este ámbito. Busco oportunidades en programación 
+            donde pueda aplicar mis habilidades analíticas y creativas para contribuir en grandes proyectos.`},
         section2:{
             title:'Proyectos',
             firstProject:{
@@ -234,6 +205,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         section3:{
             title:'Tecnoclogias',
             subTitle:'Conocimientos',
+            default:`Hola, te platico un poco de lo que sé y como es que lo sé.
+            Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
+            He explorado diferentes cursos en línea, páginas web, y practicado con proyectos.
+            Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.`,
             subTitle1:'Aprendiendo'},
         section4:{
             language:{
@@ -250,26 +225,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
         section5:{
             workHistory:{
                 title:'Experiencia',
-                workTitle:'Diseñador Grafico Independiente',
+                workTitle:'Editor de Videos',
                 fecha:'Sep 2019 - Actualmente',
-                descripcion:`Trabajo en una variedad de proyectos, desde la edición de videos promocionales hasta la creación de contenido visual para campañas 
-                de marketing en redes sociales. Mi objetivo es combinar mi experiencia en ingeniería con mi habilidad para contar historias a través de 
-                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`}},
+                descripcion:`He participado en una variedad de proyectos, desde la edición de videos promocionales hasta 
+                la creación de contenido visual para campañas digitales en redes sociales. Me gusta combinar mi 
+                formación en ingeniería con mi habilidad para contar historias a través de videos y animaciones.`}},
         section6:{  
             education:{
                 title:'Educacion',
                 degree:{
                     degree:'Maestria en Ingenieria Industrial',
                     date:'Ago 2020 - Dic 2022',
-                    descripcion: `Instituto Tecnologico de Ciudad Victoria - Tamaulipas, Mexico.
-                    Durante el tiempo en mi maestria realice los siguientes objetivos. Realización de un análisis exhaustivo del mercado local y global para 
-                    identificar oportunidades y desafíos. Desarrollo de un estudio técnico detallado para calcular los costos de infraestructura y el 
-                    retorno de la inversión. Determinación de la viabilidad económica del proyecto mediante análisis financiero y proyecciones. Investigación 
-                    exhaustiva del mercado global para evaluar la expansión potencial del servicio fuera de nuestra área local.`},
+                    descripcion: `Durante mi maestría, diseñe un proyecto que incluyó un análisis exhaustivo del mercado 
+                    local y global, un estudio técnico detallado de costos e inversiones, análisis financiero para evaluar 
+                    la viabilidad económica y una investigación del mercado global para considerar la expansión del proyecto.`},
                 secondDegree:{
                     degree:'Ingeniera Industrial',
                     date:'Ago 2012 - Dic 2017',
-                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`}}},
+                    descripcion: `Durante mi carrera de ingeniería, adquirí habilidades en la planificación y evaluación de 
+                    proyectos a corto, mediano y largo plazo, así como en procesos y mediciones de mejora continua.`}}},
         section7:'Contacto'}
     
     const englishCV = {
@@ -278,18 +252,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             second: 'Projects', 
             third :'Experince', 
             fourth:'Education'},
-        title:'Fronted Trainne Developer',
+        title:'Fronted Developer',
         section1:{
             title:'About Me',
-            description:`I am an industrial engineer with a master's degree in industrial engineering, 
-            enthusiastic about technology, film, and video games. Throughout my career, 
-            I have gained experience in image design and video editing for social media platforms. 
-            Currently, I am focusing my energy on learning programming with the goal of transitioning 
-            into a career as a programmer. I am excited to explore new opportunities in the field of 
-            programming and to apply my analytical and problem-solving skills to develop innovative 
-            solutions. I am committed to my professional growth and am constantly seeking new learning 
-            and development opportunities. I am always open to connecting with industry professionals 
-            and exploring collaborations on exciting projects.`},
+            description:`Experienced industrial engineer skilled in digital video editing platforms, passionate about cinema, sports, 
+            and technology. Over the past year, I've been studying programming to pursue a career in this field. Seeking opportunities 
+            where my analytical and creative skills can contribute to significant projects in programming.`},
         section2:{
             title:'Projects',
             firstProject:{
@@ -301,6 +269,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         section3:{
             title:'Technology',
             subTitle:'Knowledge',
+            default:`Hey, let me tell you a bit about what I know and how I learned it. For the past year, I've been self-studying HTML, CSS, and JavaScript. 
+            I've explored various online courses, websites, and practiced through projects. Explore more about my skills in each technology by hovering over them.`,
             subTitle1:'Learning'},
         section4:{
             language:{
@@ -318,25 +288,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 title:'Work Experience',
                 workTitle:'Diseñador Grafico Independiente',
                 fecha:'Sep 2019 - Currently',
-                descripcion:`Trabajo en una variedad de proyectos, desde la edición de videos promocionales hasta la creación de contenido visual para campañas 
-                de marketing en redes sociales. Mi objetivo es combinar mi experiencia en ingeniería con mi habilidad para contar historias a través de 
-                imágenes y animaciones, ofreciendo soluciones visuales que gusten y enganchen a la audiencia.`}},
+                descripcion:`I have been involved in a variety of projects, from editing promotional videos to creating visual content for digital 
+                campaigns on social media. I enjoy blending my engineering background with my ability to tell stories through videos and animations.`}},
         section6:{  
             education:{
                 title:'Education',
                 degree:{
                     degree:'Maestria en Ingenieria Industrial',
                     date:'Ago 2020 - Dic 2022',
-                    descripcion: `Instituto Tecnologico de Ciudad Victoria - Tamaulipas, Mexico.
-                    Durante el tiempo en mi maestria realice los siguientes objetivos. Realización de un análisis exhaustivo del mercado local y global para 
-                    identificar oportunidades y desafíos. Desarrollo de un estudio técnico detallado para calcular los costos de infraestructura y el 
-                    retorno de la inversión. Determinación de la viabilidad económica del proyecto mediante análisis financiero y proyecciones. Investigación 
-                    exhaustiva del mercado global para evaluar la expansión potencial del servicio fuera de nuestra área local.`
+                    descripcion: `In my master's program, I developed a project that included a comprehensive analysis of local and global markets, a detailed 
+                    technical study of costs and investments, financial analysis to evaluate economic viability, and global market research to explore project expansion.`
                 },
                 secondDegree:{
                     degree:'Ingeniera Industrial',
                     date:'Ago 2012 - Dic 2017',
-                    descripcion: `Planeacion y evaluacion de proyectos a corto, mediano y largo plazo. Procesos y mediciones de mejora continua.`  }  }    },
+                    descripcion: `Throughout my engineering studies, I gained skills in planning and evaluating projects over short, medium, and long terms, as well as in
+                     processes and measurements for continuous improvement. `  }  }    },
         section7:'Contact'}
     const printDataCV=(obj)=>{
         const spacesToPrint = document.querySelectorAll('.print-spanish-value')
@@ -400,7 +367,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     if(localStorage.getItem('nightModeActivated') === 'true'){
         nightModeClass()}
+
     printDataCV(spanishCV)
     localStorage.getItem('translate') === 'ingles' ? printDataCV(englishCV) : printDataCV(spanishCV)
+    xd()
 })
 

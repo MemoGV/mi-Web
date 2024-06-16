@@ -11,6 +11,10 @@
         url('./assets/fonts/SairaCondensed-Regular.woff2') format('woff2')
 }
 
+img{
+    max-width: auto;
+    height: auto;
+}
 
 /*ESTILOS GENERALES*/
 body{
@@ -146,14 +150,15 @@ p{
 /* PRSENTACION (FOTO, BOTONES DE REDES Y CONTACTO)*/
 
 #info{
-    margin-top: 9rem;
+    margin: 0px auto;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     flex-wrap: wrap;
     gap: 10vw;
     align-items: center;
-    margin-bottom: 5rem;
+    padding-top: 9rem;
+    padding-bottom: 5rem;
 }
  /*DATOS DEL PERFIL*/ 
 #data h1{
@@ -200,6 +205,9 @@ p{
 /*BOTONES DE DATOS DEL PERFIL*/
 
 .data-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #EEEEEE;
     border: 0.1rem solid #729caa;
     border-radius: 0.4rem;
