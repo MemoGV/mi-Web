@@ -8,32 +8,44 @@
     font-family: SairaCondense;
     src:url('./assets/fonts/SairaCondensed-Regular.ttf') format('ttf'),
         url('./assets/fonts/SairaCondensed-Regular.woff') format('woff'),
-        url('./assets/fonts/SairaCondensed-Regular.woff2') format('woff2')
+        url('./assets/fonts/SairaCondensed-Regular.woff2') format('woff2');
 }
 
-img{
-    max-width: auto;
-    height: auto;
+.place-holder{
+    display: flex;
+    align-items: center;
+    height: 163px;
+    width: 144px;
 }
-
+.place-holder-perico{
+    display: flex;
+    align-items: center;
+    height: 360px;
+    width: 450px;
+}
+main{
+    max-width: 100vw;
+    min-width: 45vw;
+    margin: 0px auto;
+}
 /*ESTILOS GENERALES*/
 body{
-margin: 0px auto;
-padding: 0px;
 font-family:SairaCondense, sans-serif;
 background-color:#EEEEEE;
 color: #053B50;
-height: auto;
-/*transition: all 300ms ease-out !important;*/
+transition: all 300ms ease-out !important;
+margin: 0px;
 }
-
+header{
+    max-width: 100vw;
+    margin-bottom: 10rem;
+}
 h2, h3{
     margin: 0px;
     
  }
  h2{
     font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 p{
     word-spacing: .2rem;
@@ -148,17 +160,20 @@ p{
 
 
 /* PRSENTACION (FOTO, BOTONES DE REDES Y CONTACTO)*/
-
+#section-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
 #info{
-    margin: 0px auto;
+    min-width: 45vw;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10vw;
+    gap: 10rem;
     align-items: center;
-    padding-top: 9rem;
-    padding-bottom: 5rem;
 }
  /*DATOS DEL PERFIL*/ 
 #data h1{
@@ -182,6 +197,7 @@ p{
     overflow: hidden;
     width: 144px;
     height: 163px;
+    aspect-ratio: 1/1.2;
 
     &:hover{
         scale:1.3;
@@ -192,9 +208,12 @@ p{
 
 #profile-photo-id{
     transition: scale 100ms ease-in-out;
+    width: 144px;
+    height:163px;
+
     &:hover{
         scale: 1.2;
-        transition-duration: scale 300ms;
+        /*transition-duration: scale 300ms;*/
     }
 }
 
@@ -213,8 +232,6 @@ p{
     border-radius: 0.4rem;
     box-shadow: 0px 0px 0.2rem #cccc;
     cursor: pointer;
-    margin-right: 1rem;
-    margin-top: .7rem;
     transition: scale 300ms ease-in-out, background-color 200ms ease-in-out, box-shadow 300ms ease-in-out;
 
     &:hover{
@@ -222,7 +239,10 @@ p{
         background-color: #e0e0e0cc;
     }
 }
-
+.img-social-media-btns{
+    width: 30px;
+    height: 30px;
+}
 #btn-Mail{
     font-family: SairaCondense, sans-serif;
     font-size: 1rem;
@@ -237,6 +257,7 @@ p{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: .5rem;
 }
 .buttons{
     display: flex;
@@ -244,6 +265,7 @@ p{
     flex-wrap: wrap;
     width: 100%;
     justify-content: flex-start;
+    gap: 1.5rem;
 }
 
 
@@ -259,28 +281,32 @@ p{
     display: none;
 }
 /*ESTILO GENERAL SECCIONES*/
-
+#section-about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #about{
     width: 45vw;
-    margin: 0px auto;
     padding-bottom: 4rem;
+    max-height: 30vh;
 }
 
 /* projects */
 #section-projects-background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
     background: linear-gradient(to top, #041b25, #053B50, #041b25);
     background-attachment: fixed;
     color: white;
     box-shadow: inset 0 10px 10px -10px #041b25,
                 inset 0 -10px 10px -10px #041b25;
-    padding: 2rem;
-
 }
 
 #project-boxes-Container{
     width: 45vw;
-    margin: 0px auto;
 }
 
 .project-boxes{
@@ -376,10 +402,13 @@ p{
 
 
 /* Seccion de Tecnologias*/
-
-#section-Tecnology{
+#section-technology{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#technology{
     width: 45vw;
-    margin: 0px auto;
     padding-top: 4rem;
     padding-bottom: 5rem;
 }
@@ -397,11 +426,6 @@ p{
     background: linear-gradient( to right, #EEEEEE, #dbdbdb);
     transition: all 0.5s ease-in-out
 }
-
-.tec-Box:first-of-type{
-    margin-bottom: 1rem;
-}
-
 .tec-Box img{
     cursor: pointer;
     transition: scale 400ms ease-in;
@@ -429,6 +453,11 @@ p{
 /* Seccion de SoftSkills*/
 
 #softskill-lang{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: linear-gradient(to top, #a8cdb2, #74E291, #bcf5cb);
     background-attachment: fixed;
     box-shadow: inset 0 0 4rem .4rem #52d575;
@@ -440,14 +469,13 @@ p{
 }
 #soft-lang{
     width: 45vw;
-    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    align-content: center;
     justify-content: space-around;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    min-height: 20vh;
 }
 
 .soft-box{
@@ -472,16 +500,18 @@ p{
     border-radius: 1rem;
     color: #053b50;
     font-size: 1.1rem;
-    cursor: pointer;
     font-style: italic;
     
 }
 
 /*experience*/
-
+#section-experience{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #experience{
     width: 45vw;
-    margin: 0px auto;
     padding-top: 3rem;
 }
 .title-date{
@@ -552,10 +582,13 @@ p{
 }
 
 /*Education*/
-
+#section-education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
 #education{
     width: 45vw;
-    margin: 0px auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
 }
@@ -567,15 +600,16 @@ p{
 /* contact */
 
 #contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #041b25;
     color: white;
     height: 30vh;
 }
 
 #data-contact{
-    margin: 0px auto;
     width: 45vw;
-    padding: 3rem;
 }
 
 .bts-Contact{

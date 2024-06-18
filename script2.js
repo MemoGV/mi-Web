@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         openPage(){
             const btnsPage = document.querySelectorAll('.btns-page')
             btnsPage.forEach(btn =>{
-    
                 btn.addEventListener('click',()=>{
                     if(btn.id === 'btn-github-contact' || btn.id === 'btn-Github'){ 
                         window.open('https://github.com/MemoGV', '_blank')
@@ -119,7 +118,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         new Button('translate-btn', 'Button Translator', Button.prototype.traduction())]
     buttons.forEach( boton => boton.addEvent())
     
-    const xd =()=>{
+    const TecDisplay=()=>{
     var timerOut
     var timerIn
     
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     imgTec.forEach((imgTec, index)=>{
         imgTec.addEventListener('mouseover',()=>{
             tecDescription.style.opacity = 0
-            var data
+            var data = txtTecTecnology[index]
 
             if(title.textContent === 'Desarrollador Web'){
                 data = txtTecTecnology[index]
@@ -178,7 +177,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         imgTec.addEventListener('mouseout', ()=>{
             tecDescription.style.opacity = 0
             timerOut = setTimeout(()=>{
-                tecDescription.style.opacity = 1},1000)
+                tecDescription.style.opacity = 1
+                if(title.textContent = 'Fronted Developer'){
+                    tecDescription.textContent = englishCV.section3.default
+                }else{
+                    tecDescription.textContent = spanishCV.section3.default}
+                },1000)
             clearTimeout(timerIn)})})
     }
 
@@ -305,8 +309,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     descripcion: `Throughout my engineering studies, I gained skills in planning and evaluating projects over short, medium, and long terms, as well as in
                      processes and measurements for continuous improvement. `  }  }    },
         section7:'Contact'}
+        
     const printDataCV=(obj)=>{
-        const spacesToPrint = document.querySelectorAll('.print-spanish-value')
+        const spacesToPrint = document.querySelectorAll('.print-cv-value')
         const arrValues = arrValuesCV(obj)
 
         if((spacesToPrint.length<arrValues.length)){
@@ -367,9 +372,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         
     if(localStorage.getItem('nightModeActivated') === 'true'){
         nightModeClass()}
-
-    printDataCV(spanishCV)
     localStorage.getItem('translate') === 'ingles' ? printDataCV(englishCV) : printDataCV(spanishCV)
-    xd()
+    TecDisplay()
 })
 

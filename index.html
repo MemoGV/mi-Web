@@ -13,10 +13,10 @@
                 <p id="title-Left">Jr|>ev</p>
                 <nav id="menu">
                     <ul id="list">
-                        <li><a class="menu-A print-spanish-value" href="#info"></a></li>
-                        <li><a class="menu-A print-spanish-value" href="#section-projects-background"></a></li>
-                        <li><a class="menu-A print-spanish-value" href="#experience"></a></li>
-                        <li><a class="menu-A print-spanish-value" href="#education"></a></li>
+                        <li><a class="menu-A print-cv-value" href="#info">Sobre Mi</a></li>
+                        <li><a class="menu-A print-cv-value" href="#section-projects-background">Proyectos</a></li>
+                        <li><a class="menu-A print-cv-value" href="#experience">Experiencia</a></li>
+                        <li><a class="menu-A print-cv-value" href="#education">Educacion</a></li>
                     </ul>
                 </nav>
                 <button id="night-btn" class="menu-btn"><img class="img-night-btn" src="./assets/light-icon/moon-filled-black.svg" width="12" height="12" alt="Icono Nightshift" style="display: block;"/>
@@ -24,67 +24,74 @@
                 <button id="translate-btn" class="menu-btn">ES/EN</button>
             </div>  
         </header>
-            <section class="section-box" id="info">   
-                    <div id="photo-profile">
-                        <img id="profile-photo-id" src="./assets/profile-photo.jpg" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />
-                    </div>
-                    <div id="data">
-                        <h1>Guillermo E. Garcia Vega</h1>
-                        <h2 id="title-job" class="print-spanish-value"></h2>
-                        <p>Tamaulipas, Mexico.</p> 
-                        <div class="buttons">
-                        <button id="btn-Mail" class="data-btns btns-mail"><img class="img-social-media-btns" src="./assets/light-icon/mail-white.svg" width="26" height="26"/>gvmemo.93@gmail.com</button>
+        <section id="section-info" >  
+            <div id="info">
+                <div id="photo-profile" class="place-holder">
+                    <img id="profile-photo-id" src="./assets/profile-photo.webp" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />
+                </div>
+                <div id="data">
+                    <h1>Guillermo E. Garcia Vega</h1>
+                    <h2 id="title-job" class="print-cv-value">Desarrollador Web</h2>
+                    <p>Tamaulipas, Mexico.</p> 
+                    <div class="buttons">
+                        <button id="btn-Mail" class="data-btns btns-mail"><img class="img-social-media-btns" src="./assets/light-icon/mail-white.svg" width="26" height="26"/></button>
                         <div class="msj-mail message-Mail">Copiado</div>
                         <button id="linkedin" class="night-mode-data data-btns btns-page"><img class="img-social-media-btns" src="./assets/light-icon/linkedin.svg" width="30" height="30"/></button>
                         <button id="btn-Github" class="night-mode-data data-btns btns-page"><img class="img-social-media-btns" src="./assets/light-icon/brand-github.svg" width="30" height="30"/></button> 
                         <button id="btn-Cv" class="night-mode-data data-btns btns-Cv"><img class="img-social-media-btns" src="./assets/light-icon/file-cv.svg" width="30" height="30"/></butto> 
-                        </div>
-                    </div>     
+                    </div>
+                </div>  
+            </div> 
+               
+        </section>
+        
+            <section id="section-about"> <!--About-->
+                <div id="about">
+                    <h2 class="print-cv-value">Sobre Mi</h2>
+                    <p id="about-me" class="print-cv-value">
+                    Ingeniero industrial con experiencia en edición de videos para plataformas digitales y un fuerte interés en el cine, los deportes y la tecnología.
+                    Durante el último año, me he dedicado a estudiar programación con la meta de desarrollar una carrera en este ámbito. Busco oportunidades en programación 
+                    donde pueda aplicar mis habilidades analíticas y creativas para contribuir en grandes proyectos.</p>
+                </div>   
             </section>
-            <main>
-                    <section id="about"> <!--About-->
-                        <h2 class="print-spanish-value"></h2>
-                        <p id="about-me" class="print-spanish-value">
-                    
-                        </p>
-                    </section>
-                    <section id="section-projects-background"> <!--Projects-->
+            <section id="section-projects-background"> <!--Projects-->
                         <div id="project-boxes-Container">   
-                            <h2 class="print-spanish-value"></h2>
+                            <h2 class="print-cv-value">Proyectos</h2>
                             <div class="project-boxes">
                                 <div id="prj1" class="project">
                                     <div class="div-img-project">
-                                        <img class="img-project" src="./assets/img-proyectos/foto perico.jpg" width="450" height="300"/>
+                                        <img class="img-project" class="place-holder-perico" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
                                     </div>
-                                    <h3 id="title-prj" class="print-spanish-value"></h3>
+                                    <h3 id="title-prj" class="print-cv-value">nombre 1</h3>
                                     <div id="labels">  
                                         <label>HTML</label><label>CSS</label><label>JavaScript</label><button><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
                                         <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/>
                                             <img class="img-up" style="display: none;" src="./assets/light-icon/chevron-up.svg"  width="18" height="18"/></button>
                                      </div>
-                                     <p class="project-box-description box-description print-spanish-value">
-                                        
+                                     <p class="project-box-description box-description print-cv-value">
+                                        descripcion proyecto 1.
                                     </p>
                                 </div>
                                 <div id="prj2" class="project">
                                     <div class="div-img-project">
-                                        <img class="img-project" src="./assets/img-proyectos/foto perico.jpg" width="450" height="300"/>
+                                        <img class="img-project" class="place-holder-perico" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
                                     </div>
-                                    <h3 class="print-spanish-value"></h3>
+                                    <h3 class="print-cv-value">nombre 2</h3>
                                     <div id="labels">  
                                         <label>HTML</label><label>CSS</label><label>JavaScript</label><button id="btn-Git-Prj"><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
                                         <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/><img class="img-up" style="display: none;" src="./assets/light-icon/chevron-up.svg"  width="18" height="18"/></button>
                                     </div>
-                                    <p class="project-box-description box-description print-spanish-value" >
-                                        
+                                    <p class="project-box-description box-description print-cv-value" >
+                                        descripcion proyiecto 2
                                     </p>
                                 </div>
                             </div> 
                         </div>
                     </section>
-                    <section id="section-Tecnology"> <!--Tecnology-->
-                        <h2 class="print-spanish-value"></h2>
-                        <h3 class="print-spanish-value"></h3>
+                    <section id="section-technology"> <!--Tecnology-->
+                        <div id="technology">
+                            <h2 class="print-cv-value">Tecnologias</h2>
+                        <h3 class="print-cv-value">Conocimientos</h3>
                         <div class="tec-Box">
                             <img class="tec-img" src="./assets/light-icon/tec/html-200px.svg" height="80" width="80" title="HTML5" alt="HTML5 Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/css-200px.svg" height="80" width="80" title="CSS" alt="CSS Logo"/>
@@ -92,67 +99,77 @@
                             <img class="tec-img" src="./assets/light-icon/tec/github-200px.svg" height="80" width="80" title="GitHub" alt="GitHub Logo"/>
                         </div>
                         <div id="description-tec-container">
-                            <p id="description-tec" class="print-spanish-value">
-                                
+                            <p id="description-tec" class="print-cv-value">
+                                Hola, te platico un poco de lo que sé y como es que lo sé.
+                                Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
+                                He explorado diferentes cursos en línea, páginas web, y practicado con proyectos.
+                                Explora más sobre mis habilidades en cada tecnología al pasar el cursor sobre ellas.
                             </p>
                         </div>
-                        <h3 class="print-spanish-value"></h3>
+                        <h3 class="print-cv-value">Aprendiendo</h3>
                         <div class="tec-Box">
                             <img class="tec-img" src="./assets/light-icon/tec/react-200px.svg" height="80" width="80" title="React" alt="React Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/nodejs02-200px.svg" height="80" width="80" title="Node.js" alt="Node.js Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/tailwind-200px.svg" height="80" width="100" title="Tailwind CSS Logo" alt="Tailwind CSS Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/typescript-200px.svg" height="75" width="75" title="Typescript" alt="Typescript Logo"/>
                         </div>
+                        </div> 
                     </section>
-                    <section id="softskill-lang">  <!--SOFTSKILL-->
+                    <!--SOFTSKILL-->
+                    <section id="softskill-lang">  
                         <div id="soft-lang">
                             <div id="idioma-List" class="soft-box">
-                                <h2 class="print-spanish-value"></h2>
+                                <h2 class="print-cv-value">Idiomas</h2>
                                 <ul >
-                                    <li class="li-box-soft print-spanish-value"></li>
-                                    <li id="eng-List" class="li-box-soft print-spanish-value"></li>
+                                    <li class="li-box-soft print-cv-value">Español</li>
+                                    <li id="eng-List" class="li-box-soft print-cv-value">Ingles B2 Certificado</li>
                                 </ul>
                             </div>
                             <div class="soft-box">
-                                <h2 class="print-spanish-value"></h2>
+                                <h2 class="print-cv-value">Habilidades</h2>
                                 <ul>
-                                    <li class="li-box-soft print-spanish-value"></li>
-                                    <li class="li-box-soft print-spanish-value"></li>
-                                    <li class="li-box-soft print-spanish-value"></li>
-                                    <li class="li-box-soft print-spanish-value"></li>
+                                    <li class="li-box-soft print-cv-value">Trabajo en equipo</li>
+                                    <li class="li-box-soft print-cv-value">Adapatabilidad</li>
+                                    <li class="li-box-soft print-cv-value">Atencion al detalle</li>
+                                    <li class="li-box-soft print-cv-value">Paciencia</li>
                                 </ul>
                             </div>
                         </div>
                     </section>
-                    <section id="experience">  <!--Expereience-->
-                        <h2 class="print-spanish-value"></h2>
-                        <div class="exp-box">
-                            <div class="title-date">
-                                <div class="title-date-label">
-                                    <h3 class="print-spanish-value"></h3> 
-                                     <div class="label-button">
-                                        <label class="label-date print-spanish-value"></label>
-                                        <button class="btn-description btn-style-description">
-                                            <img class="img-dots img-dots-blue" src="./assets/light-icon/dots.svg" style="display: block;" width="18" height="18"/>
-                                            <img class="img-up img-up-blue" src="./assets/light-icon/chevron-up.svg" style="display: none;" width="18" height="18"/>
-                                    </button>
+                    <section id="section-experience">
+                        <div id="experience">
+                            <h2 class="print-cv-value">Experiencia</h2>
+                            <div class="exp-box">
+                                <div class="title-date">
+                                    <div class="title-date-label">
+                                        <h3 class="print-cv-value">Editor de Videos</h3> 
+                                         <div class="label-button">
+                                            <label class="label-date print-cv-value">Sep 2019 - Actualmente</label>
+                                            <button class="btn-description btn-style-description">
+                                                <img class="img-dots img-dots-blue" src="./assets/light-icon/dots.svg" style="display: block;" width="18" height="18"/>
+                                                <img class="img-up img-up-blue" src="./assets/light-icon/chevron-up.svg" style="display: none;" width="18" height="18"/>
+                                        </button>
+                                        </div> 
+                                    </div>
+                                    <div class="box-description">
+                                        <p class="box-description-style print-cv-value">He participado en una variedad de proyectos, desde la edición de videos promocionales hasta 
+                                            la creación de contenido visual para campañas digitales en redes sociales. Me gusta combinar mi 
+                                            formación en ingeniería con mi habilidad para contar historias a través de videos y animaciones.</p>
                                     </div> 
                                 </div>
-                                <div class="box-description">
-                                    <p class="box-description-style print-spanish-value">
-                                    </p>
-                                </div> 
                             </div>
-                        </div>
+                        </div>  <!--Expereience-->
+                    
                     </section>
-                    <section id="education"> <!--Education-->
-                        <h2 class="print-spanish-value"><!--title--></h2>
-                        <div class="edu-box">
+                    <section id="section-education"> <!--Education-->
+                        <div id="education">
+                            <h2 class="print-cv-value">Educacion</h2>
+                            <div class="edu-box">
                             <div class="title-date">
                                 <div class="title-date-label">
-                                    <h3 class="print-spanish-value"><!--degree--></h3>
+                                    <h3 class="print-cv-value">Maestria en Ingenieria Industrial</h3>
                                     <div class="label-button">
-                                        <label class="print-spanish-value label-date"><!--date--></label>
+                                        <label class="print-cv-value label-date">Ago 2020 - Dic 2022</label>
                                         <button class="btn-description btn-style-description">
                                             <img class="img-dots img-dots-blue" src="./assets/light-icon/dots.svg" style="display: block;" width="18" height="18" />
                                             <img class="img-up img-up-blue" src="./assets/light-icon/chevron-up.svg" style="display: none;" width="18" height="18"/>
@@ -161,34 +178,38 @@
                                 </div>
                                 <div class="box-description">
                                     <p class="box-description-style">
-                                        <label class="print-spanish-value"><!--description-->
+                                        <label class="print-cv-value">Durante mi maestría, diseñe un proyecto que incluyó un análisis exhaustivo del mercado 
+                                        local y global, un estudio técnico detallado de costos e inversiones, análisis financiero para evaluar 
+                                        la viabilidad económica y una investigación del mercado global para considerar la expansión del proyecto.</label>
                                     </p>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="edu-box">
-                            <div class="title-date">
-                                <div class="title-date-label">
-                                    <h3 class="print-spanish-value"><!--degree--></h3>
-                                    <div class="label-button">
-                                        <label class="print-spanish-value label-date" ><!--date--></label>
-                                        <button class="btn-description btn-style-description">
-                                            <img class="img-dots img-dots-blue" src="./assets/light-icon/dots.svg" style="display: block;" width="18" height="18"/>
-                                            <img class="img-up img-up-blue" src="./assets/light-icon/chevron-up.svg" style="display: none;" width="18" height="18"/>
-                                        </button>
-                                    </div>
+                                    </div> 
                                 </div>
-                                <div class="box-description ">
-                                    <P class="box-description-style">
-                                        <label class="print-spanish-value"><!--description--></label>
-                                    </P>
+                            </div>
+                            <div class="edu-box">
+                                <div class="title-date">
+                                    <div class="title-date-label">
+                                        <h3 class="print-cv-value">Ingeniera Industrial</h3>
+                                        <div class="label-button">
+                                            <label class="print-cv-value label-date" >Ago 2012 - Dic 2017</label>
+                                            <button class="btn-description btn-style-description">
+                                                <img class="img-dots img-dots-blue" src="./assets/light-icon/dots.svg" style="display: block;" width="18" height="18"/>
+                                                <img class="img-up img-up-blue" src="./assets/light-icon/chevron-up.svg" style="display: none;" width="18" height="18"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-description ">
+                                        <P class="box-description-style">
+                                            <label class="print-cv-value">Durante mi carrera de ingeniería, adquirí habilidades en la planificación y evaluación de 
+                                                proyectos a corto, mediano y largo plazo, así como en procesos y mediciones de mejora continua.</label>
+                                        </P>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <footer id="contact"><!--Contact-->
                         <div id="data-contact">
-                            <h2 class="print-spanish-value"></h2>
+                            <h2 class="print-cv-value">Contacto</h2>
                             <div class="bts-Contact">
                                 <button id="btn-mail-contact" class="style-btns btns-mail"><img class="img-social-media-btns" src="./assets/light-icon/mail.svg"  width="30" height="30"/></button>
                                 <div class="msj-mail mail">Copiado</div>
@@ -198,6 +219,6 @@
                             </div>
                         </div>
                     </footer>
-            </main> 
+         
     </body>
 </html>
