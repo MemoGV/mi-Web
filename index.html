@@ -4,11 +4,11 @@
         <meta charset="utf-8"/>
         <meta  name="viewport" content="width=device-width, user-scalable=1.0"/>
         <link rel="stylesheet" type="text/css" href="./styles.css"/>
-        <script type="text/javascript" src="./script2.js" ></script>
+        <script type="text/javascript" src="./script2.js"></script>
         <title>Mi primera pagina web</title>
     </head>
     <body>
-        <header>
+    
             <div id="head">
                 <p id="title-Left">Jr|>ev</p>
                 <nav id="menu">
@@ -21,9 +21,9 @@
                 </nav>
                 <button id="night-btn" class="menu-btn"><img class="img-night-btn" src="./assets/light-icon/moon-filled-black.svg" width="12" height="12" alt="Icono Nightshift" style="display: block;"/>
                     <img class="img-light-btn" src="./assets/light-icon/normalSun.svg" width="12" height="12" alt="Icono Lightshift" style="display: none;"/></button>
-                <button id="translate-btn" class="menu-btn">ES/EN</button>
+                <button id="translate-btn" class="menu-btn"><span id="span-es-en">ES/EN</span></button>
             </div>  
-        </header>
+        
         <section id="section-info" >  
             <div id="info">
                 <div id="photo-profile" class="place-holder">
@@ -54,32 +54,44 @@
                     donde pueda aplicar mis habilidades analíticas y creativas para contribuir en grandes proyectos.</p>
                 </div>   
             </section>
-            <section id="section-projects-background"> <!--Projects-->
-                        <div id="project-boxes-Container">   
+            <!--Projects-->
+            <section id="section-projects-background"> 
+                        <div id="project-boxes-container">   
                             <h2 class="print-cv-value">Proyectos</h2>
                             <div class="project-boxes">
                                 <div id="prj1" class="project">
                                     <div class="div-img-project">
-                                        <img class="img-project" class="place-holder-perico" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
+                                        <img class="img-project" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
                                     </div>
                                     <h3 id="title-prj" class="print-cv-value">nombre 1</h3>
-                                    <div id="labels">  
-                                        <label>HTML</label><label>CSS</label><label>JavaScript</label><button><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
-                                        <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/>
+                                    <div class="div-labels-btns">
+                                        <div id="labels">  
+                                            <label>HTML</label><label>CSS</label><label>JavaScript</label>
+                                         </div>
+                                         <div class="div-btns-projects">
+                                            <button><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
+                                            <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/>
                                             <img class="img-up" style="display: none;" src="./assets/light-icon/chevron-up.svg"  width="18" height="18"/></button>
-                                     </div>
+                                         </div>
+                                    </div>
                                      <p class="project-box-description box-description print-cv-value">
                                         descripcion proyecto 1.
                                     </p>
                                 </div>
                                 <div id="prj2" class="project">
                                     <div class="div-img-project">
-                                        <img class="img-project" class="place-holder-perico" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
+                                        <img class="img-project" src="./assets/img-proyectos/foto perico.webp" width="450" height="300"/>
                                     </div>
                                     <h3 class="print-cv-value">nombre 2</h3>
-                                    <div id="labels">  
-                                        <label>HTML</label><label>CSS</label><label>JavaScript</label><button id="btn-Git-Prj"><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
-                                        <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/><img class="img-up" style="display: none;" src="./assets/light-icon/chevron-up.svg"  width="18" height="18"/></button>
+                                    <div class="div-labels-btns">
+                                        <div id="labels">  
+                                            <label>HTML</label><label>CSS</label><label>JavaScript</label>
+                                         </div>
+                                         <div class="div-btns-projects">
+                                            <button><img src="./assets/light-icon/brand-github-white.svg" width="18" height="18"/></button>
+                                            <button class="btn-description"><img class="img-dots"  width="18" height="18" src="./assets/light-icon/dots.svg" style="display: block;"/>
+                                            <img class="img-up" style="display: none;" src="./assets/light-icon/chevron-up.svg"  width="18" height="18"/></button>
+                                         </div>
                                     </div>
                                     <p class="project-box-description box-description print-cv-value" >
                                         descripcion proyiecto 2
@@ -88,14 +100,15 @@
                             </div> 
                         </div>
                     </section>
-                    <section id="section-technology"> <!--Tecnology-->
+                     <!--Tecnology-->
+                    <section id="section-technology">
                         <div id="technology">
                             <h2 class="print-cv-value">Tecnologias</h2>
                         <h3 class="print-cv-value">Conocimientos</h3>
                         <div class="tec-Box">
                             <img class="tec-img" src="./assets/light-icon/tec/html-200px.svg" height="80" width="80" title="HTML5" alt="HTML5 Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/css-200px.svg" height="80" width="80" title="CSS" alt="CSS Logo"/>
-                            <img class="tec-img" src="./assets/light-icon/tec/javascript-200px.svg" height="75" width="75" title="JavaScript" alt="JavaScript Logo"/>
+                            <img class="tec-img" src="./assets/light-icon/tec/javascript-200px.svg" height="80" width="80" title="JavaScript" alt="JavaScript Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/github-200px.svg" height="80" width="80" title="GitHub" alt="GitHub Logo"/>
                         </div>
                         <div id="description-tec-container">
@@ -110,8 +123,8 @@
                         <div class="tec-Box">
                             <img class="tec-img" src="./assets/light-icon/tec/react-200px.svg" height="80" width="80" title="React" alt="React Logo"/>
                             <img class="tec-img" src="./assets/light-icon/tec/nodejs02-200px.svg" height="80" width="80" title="Node.js" alt="Node.js Logo"/>
-                            <img class="tec-img" src="./assets/light-icon/tec/tailwind-200px.svg" height="80" width="100" title="Tailwind CSS Logo" alt="Tailwind CSS Logo"/>
-                            <img class="tec-img" src="./assets/light-icon/tec/typescript-200px.svg" height="75" width="75" title="Typescript" alt="Typescript Logo"/>
+                            <img class="tec-img" src="./assets/light-icon/tec/tailwind-200px.svg" height="80" width="80" title="Tailwind CSS Logo" alt="Tailwind CSS Logo"/>
+                            <img class="tec-img" src="./assets/light-icon/tec/typescript-200px.svg" height="80" width="80" title="Typescript" alt="Typescript Logo"/>
                         </div>
                         </div> 
                     </section>

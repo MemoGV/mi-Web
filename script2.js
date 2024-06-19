@@ -97,9 +97,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     imgDots[index].style.display = 'none'
                     imgUp[index].style.display = 'block'}})})}
         traduction(){
-          translateBtn.addEventListener('click',()=>{
+            
+            translateBtn.addEventListener('click',()=>{
                 if(title.textContent === 'Desarrollador Web'){
-                    printDataCV(englishCV) 
+                    printDataCV(englishCV)
                     translateBtn.textContent = 'EN/ES'
                     localStorage.setItem('translate', 'ingles')
                 }else{
@@ -254,7 +255,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         menu:{
             first:'About Me', 
             second: 'Projects', 
-            third :'Experince', 
+            third :'Experience', 
             fourth:'Education'},
         title:'Fronted Developer',
         section1:{
@@ -280,7 +281,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             language:{
                 title:'Languages',
                 Lang:'Spanish',
-                Lang2:'English'},
+                Lang2:'B2 English Certificate'},
             skills:{
                 title:'Softkills',
                 skill:'Teamwork',
@@ -290,7 +291,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         section5:{
             workHistory:{
                 title:'Work Experience',
-                workTitle:'Diseñador Grafico Independiente',
+                workTitle:'Video Editor',
                 fecha:'Sep 2019 - Currently',
                 descripcion:`I have been involved in a variety of projects, from editing promotional videos to creating visual content for digital 
                 campaigns on social media. I enjoy blending my engineering background with my ability to tell stories through videos and animations.`}},
@@ -298,32 +299,31 @@ document.addEventListener('DOMContentLoaded', ()=>{
             education:{
                 title:'Education',
                 degree:{
-                    degree:'Maestria en Ingenieria Industrial',
+                    degree:`Master's Degree in Industrial Engineering`,
                     date:'Ago 2020 - Dic 2022',
                     descripcion: `In my master's program, I developed a project that included a comprehensive analysis of local and global markets, a detailed 
                     technical study of costs and investments, financial analysis to evaluate economic viability, and global market research to explore project expansion.`
                 },
                 secondDegree:{
-                    degree:'Ingeniera Industrial',
+                    degree:`Bachelor's Degree in Industrial Engineering`,
                     date:'Ago 2012 - Dic 2017',
                     descripcion: `Throughout my engineering studies, I gained skills in planning and evaluating projects over short, medium, and long terms, as well as in
                      processes and measurements for continuous improvement. `  }  }    },
         section7:'Contact'}
-        
-    const printDataCV=(obj)=>{
+    
+        const printDataCV=(obj)=>{
         const spacesToPrint = document.querySelectorAll('.print-cv-value')
         const arrValues = arrValuesCV(obj)
-
         if((spacesToPrint.length<arrValues.length)){
             console.error('No hay suficientes Divs para mostrar todos los Valores')
             return}
         spacesToPrint.forEach((div, index)=>{
+            div.style.opacity = 0
             if(index<arrValues.length){
-                div.style.opacity = 0
-                div.textContent = arrValues[index]
                 setTimeout(()=>{
                     div.style.opacity = 1
-                }, 300)
+                    div.textContent = arrValues[index]
+                }, 500)
                 }})}
 
     const arrValuesCV=(obj)=>{

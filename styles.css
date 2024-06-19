@@ -10,18 +10,9 @@
         url('./assets/fonts/SairaCondensed-Regular.woff') format('woff'),
         url('./assets/fonts/SairaCondensed-Regular.woff2') format('woff2');
 }
-
-.place-holder{
-    display: flex;
-    align-items: center;
-    height: 163px;
-    width: 144px;
-}
-.place-holder-perico{
-    display: flex;
-    align-items: center;
-    height: 360px;
-    width: 450px;
+.print-cv-value{
+    opacity: 1;
+    transition: all 200ms ease-in-out;
 }
 main{
     max-width: 100vw;
@@ -36,16 +27,12 @@ color: #053B50;
 transition: all 300ms ease-out !important;
 margin: 0px;
 }
-header{
-    max-width: 100vw;
-    margin-bottom: 10rem;
-}
 h2, h3{
     margin: 0px;
-    
  }
  h2{
     font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 p{
     word-spacing: .2rem;
@@ -131,8 +118,8 @@ p{
     justify-content: center;
     gap: 3rem;
     margin: 0px;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
 }
 #menu ul{
     padding: 0px;
@@ -161,10 +148,12 @@ p{
 
 /* PRSENTACION (FOTO, BOTONES DE REDES Y CONTACTO)*/
 #section-info{
+    margin-top: 10rem;
+    width: 100%;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 6rem;
 }
 #info{
     min-width: 45vw;
@@ -213,7 +202,7 @@ p{
 
     &:hover{
         scale: 1.2;
-        /*transition-duration: scale 300ms;*/
+        transition-duration: scale 300ms;
     }
 }
 
@@ -282,18 +271,20 @@ p{
 }
 /*ESTILO GENERAL SECCIONES*/
 #section-about{
+    width: 100%;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #about{
     width: 45vw;
-    padding-bottom: 4rem;
-    max-height: 30vh;
 }
 
 /* projects */
 #section-projects-background{
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,15 +295,11 @@ p{
     box-shadow: inset 0 10px 10px -10px #041b25,
                 inset 0 -10px 10px -10px #041b25;
 }
-
-#project-boxes-Container{
+#project-boxes-container{
     width: 45vw;
+    padding: 2rem 0 4rem 0;
 }
-
 .project-boxes{
-    width: 40vw;
-    margin: 0px auto;
-    padding-bottom: 5vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -321,16 +308,16 @@ p{
 }
 
 .project{
-    box-shadow: 0px 0px 1rem #020f14;
-    border-radius: 1rem;
-    background-color: #053B50;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    gap: .3rem;
-    padding-bottom: 2vh;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 7px 1rem #020f14;
+    border-radius: 1rem;
+    background-color: #053B50;
+    padding-bottom: 1.5rem;
     flex: 1;
     transition: scale 200ms ease-in-out, box-shadow 300ms ease-in-out;
 
@@ -339,7 +326,6 @@ p{
         box-shadow: 0px 0px 1.5rem #020f14;
     }
 }
-
 .project-box-description{
     margin: 2rem;
     font-size: large;
@@ -361,18 +347,21 @@ p{
         transition-duration: 300ms;
     }
 }
+.img-project{
+    width: 450px;
+    height: 300px;
+}
 .project h3{
     font-size: 1.8rem;
 }
 
 #labels{
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: .4rem;
+    gap: .5rem;
 }
 
 #labels>label{
@@ -382,7 +371,35 @@ p{
     color: #053b50;
     font-style: italic;
 }
-
+.div-labels-btns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    gap: 4rem;
+}
+.div-btns-projects{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.div-btns-projects button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background-color: #020f14;
+    color: #cccc;
+    cursor: pointer;
+    border: 0px;
+}
 #labels button{
     display: flex;
     align-items: center;
@@ -398,21 +415,17 @@ p{
 #labels button:first-of-type{
     margin-left: 2.5rem;
 }
-
-
-
 /* Seccion de Tecnologias*/
 #section-technology{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 65vh;
+    width: 100%;
 }
 #technology{
     width: 45vw;
-    padding-top: 4rem;
-    padding-bottom: 5rem;
 }
-
 .tec-Box{
     display: flex;
     align-items: center;
@@ -427,29 +440,26 @@ p{
     transition: all 0.5s ease-in-out
 }
 .tec-Box img{
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     transition: scale 400ms ease-in;
 
     &:hover{
         scale:1.2;
-        transition-duration: 100ms;
-    }
+        transition-duration: 100ms;}
 }
 
 #description-tec-container{
-    height: 10vh;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    height: auto;
+    padding: 1rem;
 }
-
-
 #description-tec{
     opacity: 1;
     transition: all 0.5s ease-in-out;
     text-align: center;
     
 }
-
 /* Seccion de SoftSkills*/
 
 #softskill-lang{
@@ -461,7 +471,8 @@ p{
     background: linear-gradient(to top, #a8cdb2, #74E291, #bcf5cb);
     background-attachment: fixed;
     box-shadow: inset 0 0 4rem .4rem #52d575;
-    height: auto;
+    height: 25vh;
+    width: 100%;
 }
 
 #softskill-lang h2{
@@ -475,7 +486,6 @@ p{
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    min-height: 20vh;
 }
 
 .soft-box{
@@ -488,9 +498,11 @@ p{
 .soft-box ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 1.2rem;
     padding: 0px;
+    margin: 0px;
 }
 
 .soft-box ul li{
@@ -509,6 +521,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: auto;
+    width: 100%;
 }
 #experience{
     width: 45vw;
@@ -516,13 +530,14 @@ p{
 }
 .title-date{
     display: flex;
-    width: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    height:auto;
     border: 1px solid #cccc;
     border-radius: .7rem;
     box-shadow: 0px 0px .5rem #cccc;
-    margin: 0px;
 }
 
 .box-description{
@@ -560,8 +575,8 @@ p{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    height: 5vh;
+    width: 100%;
 }
 .btn-style-description{
     border: none;
@@ -586,11 +601,10 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 3rem 0 3rem 0;
 }   
 #education{
     width: 45vw;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
 }
 
 #education>div:first-of-type{
@@ -617,7 +631,6 @@ p{
     align-items: center;
     justify-content: flex-start;
     gap: 1.5vw;
-    margin-top: 2rem;
 }
 
 .style-btns{
@@ -664,11 +677,6 @@ p{
 .display-block{
     display: block !important;
 }
-.print-spanish-value{
-    opacity: 1;
-    transition: all 200ms ease-in-out;
-}
-
 /*/////////////////////Night Mode////////////////////*/
 
 .night-mode{
