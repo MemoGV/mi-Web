@@ -28,6 +28,43 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const title = document.getElementById('title-job')
     const imgTec = document.querySelectorAll(".tec-img")
     const tecDescription = document.getElementById('description-tec')
+
+    const toggleClass =(id,className)=>{
+        if(id.length>1){
+            id.forEach((data)=>{
+                data.classList.toggle(className)})
+        }else{
+            id.classList.toggle(className)}}
+            
+    const nightModeClass=()=>{
+        toggleClass(imgDarkMode,'prueba')
+        toggleClass(imgLightMode, 'display-block')
+        toggleClass(header, 'night-mode-Head' )
+        toggleClass(nightBtnStyle, 'night-mode-Night-Btn')
+        toggleClass(sectionProjectsBackground,'night-mode-prj-background')
+        toggleClass(softTittle, 'night-mode-skill')
+        toggleClass(contact, 'night-mode-prj')
+        toggleClass(photoProfile, 'night-mode-photo-profile')
+        toggleClass(mailBtn, 'night-btn-mail')
+        toggleClass(translateBtn, 'night-mode-translate-btn')
+        toggleClass(menuA, 'night-mode-A')
+        toggleClass(prjBox, 'night-mode-prj')
+        toggleClass(tecBox, 'night-mode-tec-box')
+        toggleClass(tecImg, 'night-tec-img')
+        toggleClass(softBox, 'night-mode-prj')
+        toggleClass(titleDate, 'night-mode-exp-box')
+        toggleClass(boxDescriptionStyle, 'night-mode-exp-box-txt')
+        toggleClass(btnsDescriptionExpEdu, 'night-mode')
+        toggleClass(dotsBtnsDescExpEdu, 'night-tec-img')
+        toggleClass(upBtnsDescExpEdu, 'night-tec-img')
+        toggleClass(imgSocialMediaBtns, 'night-tec-img')
+        toggleClass(styleBtnsContact, 'night-btns-social-media')
+        toggleClass(styleDataBtns, 'night-btns-data')
+        toggleClass(msjMail, 'night-mode-msj-copy-mail')
+        toggleClass(body, 'night-mode')}
+        
+    if(localStorage.getItem('nightModeActivated') === 'true'){
+        nightModeClass()}
     
     class Button {   // class btns ///
         constructor(clas, name, action){
@@ -39,13 +76,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if (this.buttonElement) {
                 this.buttonElement.addEventListener('click', this.action); }}
         nightMode(){
-            var variable = localStorage.getItem('nightModeActivated')
-            variable = (variable === 'false' || variable === null) ? 'true' : 'false'
+            let nightshift = localStorage.getItem('nightModeActivated')
+            nightshift = (nightshift === 'false' || nightshift === null) ? 'true' : 'false'
             nightBtn.addEventListener('click', ()=>{
                 
                 nightModeClass()
-                localStorage.setItem('nightModeActivated', variable)
-                variable = variable === 'false'? 'true':'false'})}    
+                localStorage.setItem('nightModeActivated', nightshift)
+                nightshift = nightshift === 'false'? 'true':'false'})}    
         openPage(){
             const btnsPage = document.querySelectorAll('.btns-page')
             btnsPage.forEach(btn =>{
@@ -96,13 +133,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     prjDescription[index].style.display ='block'
                     imgDots[index].style.display = 'none'
                     imgUp[index].style.display = 'block'}})})}
+        
         traduction(){
-            
             translateBtn.addEventListener('click',()=>{
                 if(title.textContent === 'Desarrollador Web'){
                     printDataCV(englishCV)
                     translateBtn.textContent = 'EN/ES'
-                    localStorage.setItem('translate', 'ingles')
+                    localStorage.setItem('translate', 'english')
                 }else{
                     printDataCV(spanishCV)
                     translateBtn.textContent = 'ES/EN'
@@ -193,7 +230,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             second: 'Proyectos', 
             third :'Experiencia', 
             fourth:'Educacion'},
+        name:'Guillermo E Garcia Vega',
         title:'Desarrollador Web',
+        location:'Tamaulipas, Mexico.',
         section1:{
             title:'Sobre Mi',
             description:`Ingeniero industrial con experiencia en edición de videos para plataformas digitales y un fuerte interés en el cine, los deportes y la tecnología.
@@ -203,10 +242,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
             title:'Proyectos',
             firstProject:{
                 prjName:'nombre 1',
-                description:`descripcion proyecto 1.`},
+                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
+                description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et arcu in dolor mattis tristique. Donec tristique augue elit, eget finibus lorem
+                 posuere id. Suspendisse at commodo nibh. Morbi eget mauris a ipsum vulputate faucibus et at libero. Praesent lacinia magna sed leo varius mollis vitae vitae urna. 
+                 Morbi pharetra dictum nulla, eget aliquet quam faucibus a. Pellentesque fringilla id massa sollicitudin tristique. Mauris finibus, metus ac faucibus rhoncus, 
+                 eros metus rutrum neque, vel ultricies arcu tellus porta ante. Maecenas a condimentum tortor.`},
             secondProject:{
                 prjName:'nombre 2',
-                description:`descripcion proyiecto 2`}},
+                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
+                description:`descripcion proyiecto 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et arcu in dolor mattis tristique. Donec tristique augue elit, eget finibus lorem
+                 posuere id. Suspendisse at commodo nibh. Morbi eget mauris a ipsum vulputate faucibus et at libero. Praesent lacinia magna sed leo varius mollis vitae vitae urna. 
+                 Morbi pharetra dictum nulla, eget aliquet quam faucibus a. Pellentesque fringilla id massa sollicitudin tristique. Mauris finibus, metus ac faucibus rhoncus, 
+                 eros metus rutrum neque, vel ultricies arcu tellus porta ante. Maecenas a condimentum tortor.`}},
         section3:{
             title:'Tecnoclogias',
             subTitle:'Conocimientos',
@@ -257,7 +304,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             second: 'Projects', 
             third :'Experience', 
             fourth:'Education'},
+        name:'Guillermo E Garcia Vega',
         title:'Fronted Developer',
+        location:'Tamaulipas, Mexico.',
         section1:{
             title:'About Me',
             description:`Experienced industrial engineer skilled in digital video editing platforms, passionate about cinema, sports, 
@@ -267,9 +316,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
             title:'Projects',
             firstProject:{
                 prjName:'name 1',
+                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
                 description:`project description 1.`},
             secondProject:{
                 prjName:'name 2',
+                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
                 description:`project description 2`}},
         section3:{
             title:'Technology',
@@ -335,44 +386,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 else{values.push(obj[key])}
             }}
         return values}
-
-    const toggleClass =(id,className)=>{
-        if(id.length>1){
-            id.forEach((data)=>{
-                data.classList.toggle(className)})
-        }else{
-            id.classList.toggle(className)}}
-            
-    const nightModeClass=()=>{
-        toggleClass(imgDarkMode,'prueba')
-        toggleClass(imgLightMode, 'display-block')
-        toggleClass(header, 'night-mode-Head' )
-        toggleClass(nightBtnStyle, 'night-mode-Night-Btn')
-        toggleClass(sectionProjectsBackground,'night-mode-prj-background')
-        toggleClass(softTittle, 'night-mode-skill')
-        toggleClass(contact, 'night-mode-prj')
-        toggleClass(photoProfile, 'night-mode-photo-profile')
-        toggleClass(mailBtn, 'night-btn-mail')
-        toggleClass(translateBtn, 'night-mode-translate-btn')
-        toggleClass(menuA, 'night-mode-A')
-        toggleClass(prjBox, 'night-mode-prj')
-        toggleClass(tecBox, 'night-mode-tec-box')
-        toggleClass(tecImg, 'night-tec-img')
-        toggleClass(softBox, 'night-mode-prj')
-        toggleClass(titleDate, 'night-mode-exp-box')
-        toggleClass(boxDescriptionStyle, 'night-mode-exp-box-txt')
-        toggleClass(btnsDescriptionExpEdu, 'night-mode')
-        toggleClass(dotsBtnsDescExpEdu, 'night-tec-img')
-        toggleClass(upBtnsDescExpEdu, 'night-tec-img')
-        toggleClass(imgSocialMediaBtns, 'night-tec-img')
-        toggleClass(styleBtnsContact, 'night-btns-social-media')
-        toggleClass(styleDataBtns, 'night-btns-data')
-        toggleClass(msjMail, 'night-mode-msj-copy-mail')
-        toggleClass(body, 'night-mode')}
-        
-    if(localStorage.getItem('nightModeActivated') === 'true'){
-        nightModeClass()}
-    localStorage.getItem('translate') === 'ingles' ? printDataCV(englishCV) : printDataCV(spanishCV)
+    localStorage.getItem('translate') === 'english' ? printDataCV(englishCV) : printDataCV(spanishCV)
     TecDisplay()
 })
 

@@ -14,11 +14,11 @@
     opacity: 1;
     transition: all 200ms ease-in-out;
 }
-main{
+/*main{
     max-width: 100vw;
     min-width: 45vw;
     margin: 0px auto;
-}
+}*/
 /*ESTILOS GENERALES*/
 body{
 font-family:SairaCondense, sans-serif;
@@ -306,7 +306,6 @@ p{
     gap: 3rem;
     align-items: flex-start;
 }
-
 .project{
     display: flex;
     flex-direction: column;
@@ -317,7 +316,6 @@ p{
     box-shadow: 0px 7px 1rem #020f14;
     border-radius: 1rem;
     background-color: #053B50;
-    padding-bottom: 1.5rem;
     flex: 1;
     transition: scale 200ms ease-in-out, box-shadow 300ms ease-in-out;
 
@@ -327,7 +325,7 @@ p{
     }
 }
 .project-box-description{
-    margin: 2rem;
+    margin: 0 2rem 1rem;
     font-size: large;
     font-weight: 500;
     word-spacing: .1rem;
@@ -351,10 +349,11 @@ p{
     width: 450px;
     height: 300px;
 }
-.project h3{
+.title-prj{
     font-size: 1.8rem;
+    width: auto;
+    height: 5vh;
 }
-
 #labels{
     display: flex;
     flex-direction: row;
@@ -379,6 +378,7 @@ p{
     justify-content: space-around;
     align-content: center;
     width: 100%;
+    height: 7vh;
     gap: 4rem;
 }
 .div-btns-projects{
@@ -392,8 +392,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2rem;
-    width: 2rem;
+    height: 3.3vh;
+    width: 1.7vw;
     border-radius: 2rem;
     background-color: #020f14;
     color: #cccc;
@@ -432,9 +432,11 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-content: center;
+    width: auto;
+    height: 12vh;
     border: .3rem solid #053B50;
     border-radius: 1rem;
-    padding: 1rem;
     box-shadow: inset 0px 0px 1rem #a5a1a1;
     background: linear-gradient( to right, #EEEEEE, #dbdbdb);
     transition: all 0.5s ease-in-out
@@ -451,8 +453,14 @@ p{
 }
 
 #description-tec-container{
-    height: auto;
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 15vh;
+    width: 100%;
 }
 #description-tec{
     opacity: 1;
