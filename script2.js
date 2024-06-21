@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                  Morbi pharetra dictum nulla, eget aliquet quam faucibus a. Pellentesque fringilla id massa sollicitudin tristique. Mauris finibus, metus ac faucibus rhoncus, 
                  eros metus rutrum neque, vel ultricies arcu tellus porta ante. Maecenas a condimentum tortor.`}},
         section3:{
-            title:'Tecnoclogias',
+            title:'Tecnologias',
             subTitle:'Conocimientos',
             default:`Hola, te platico un poco de lo que sé y como es que lo sé.
             Durante un año, me he dedicado a estudiar HTML, CSS y JavaScript de manera autodidacta. 
