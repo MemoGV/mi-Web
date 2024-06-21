@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', ()=>{
+
+    if('scrollRestoration' in history){history.scrollRestoration = 'manual'}
+    window.onload=()=>{window.scrollTo(0,0)}
     const body = document.body
     const nightBtn = document.getElementById('night-btn') 
     const header = document.getElementById('head') 
@@ -11,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const mailBtn = document.getElementById('btn-Mail')
     const menuA = document.querySelectorAll('.menu-A') 
     const prjBox = document.querySelectorAll('.project')
-    const tecBox = document.querySelectorAll('.tec-Box')
+    const tecBox = document.querySelectorAll('.tec-box')
     const tecImg = document.querySelectorAll('.tec-img')
     const softBox = document.querySelectorAll('.li-box-soft')
     const titleDate = document.querySelectorAll('.title-date')
@@ -216,7 +219,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             tecDescription.style.opacity = 0
             timerOut = setTimeout(()=>{
                 tecDescription.style.opacity = 1
-                if(title.textContent = 'Fronted Developer'){
+                if(localStorage.getItem('translate')==='english'){
                     tecDescription.textContent = englishCV.section3.default
                 }else{
                     tecDescription.textContent = spanishCV.section3.default}
@@ -230,6 +233,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             second: 'Proyectos', 
             third :'Experiencia', 
             fourth:'Educacion'},
+        profilePhoto:`<img id="profile-photo-id" src="./assets/profile-photo.webp" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />`,
         name:'Guillermo E Garcia Vega',
         title:'Desarrollador Web',
         location:'Tamaulipas, Mexico.',
@@ -304,6 +308,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             second: 'Projects', 
             third :'Experience', 
             fourth:'Education'},
+        profilePhoto:`<img id="profile-photo-id" src="./assets/profile-photo.webp" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />`,
         name:'Guillermo E Garcia Vega',
         title:'Fronted Developer',
         location:'Tamaulipas, Mexico.',
@@ -373,7 +378,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if(index<arrValues.length){
                 setTimeout(()=>{
                     div.style.opacity = 1
-                    div.textContent = arrValues[index]
+                    div.innerHTML = arrValues[index]
                 }, 500)
                 }})}
 
