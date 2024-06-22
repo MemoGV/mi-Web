@@ -1,5 +1,4 @@
 /*FUENTES*/
-
 @font-face{
     font-family: Ibmfont;
     src:url('./assets/fonts/IBMPlexMono-Regular.ttf') format('ttf'),
@@ -14,62 +13,49 @@
     opacity: 1;
     transition: all 200ms ease-in-out;
 }
-/*main{
-    max-width: 100vw;
-    min-width: 45vw;
-    margin: 0px auto;
-}*/
 /*ESTILOS GENERALES*/
 body{
 font-family:SairaCondense, sans-serif;
 background-color:#EEEEEE;
 color: #053B50;
 transition: all 300ms ease-out !important;
-margin: 0px;
-}
-h2, h3{
-    margin: 0px;
- }
- h2{
-    font-size: 2.5rem;
-}
-p{
-    word-spacing: .2rem;
+margin: 0px;}
+
+h2, h3{margin: 0px;}
+
+h2{font-size: 2.5rem;}
+
+p{  word-spacing: .2rem;
     font-size: large;
     text-align: left;
     font-weight: 500;
-    margin: 0px;
-}
- 
+    margin: 0px;}
 
  /*PARTE SUPERIOR DE LA WEB (MENU, PRESENTACION)*/
 
-#head{                    /* HEADER (LOGO, MENU, BOTON DE CONTACTO) */
-    width: 100vw;
+#head{  
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: fixed;                  
+    width: 100vw;
+    height: auto;
+    padding: 1rem 0 1rem;
     z-index: 1;
     top: 0;
-    height: 7vh;
     border-bottom: .01rem solid #cccc;
     box-shadow: 0px 0px .5rem #cccc;
-    background-color: #EEEEEE;
-}
+    background-color: #EEEEEE;}
 #wrap-head{
     display: flex;
     flex-direction: row;
     width: 80%;
     justify-content: center;
-    gap: 1rem;
-}
+    gap: 1rem;}
 #menu{                /* MENU FLOTANTE */
     width: 60vw;
     font-size: 1.1rem;   
-    font-weight: 900;  
-     
-}
+    font-weight: 900;      }
 .menu-btn{                  /*ESTILO GENERAL CLASE DE BOTON*/
     width: 1.6rem;
     height: 1.6rem;
@@ -78,11 +64,11 @@ p{
     font-family:sans-serif;
     cursor: pointer;
     border: 1px solid #176B87;
-    transition: all 300ms;
-}
-
+    transition: all 300ms;}
+#title-left{
+    font-weight: 800;
+    font-style: italic;}
 #night-btn{
-
     &:hover{
         border: 1px solid #4f4d8a;
         background-color: #5F5D9C;
@@ -94,11 +80,7 @@ p{
 
         .img-light-btn{
             scale: 1.1 ;
-            filter: grayscale(100%) brightness(0%);
-        }
-    }
-}
-
+            filter: grayscale(100%) brightness(0%);}}}
 #translate-btn{
     width: 4rem;
     background-color: #176B87;
@@ -110,11 +92,7 @@ p{
     color: #EEEEEE;
 
     &:hover{
-        background-color: #020f14;
-    }
-}
-
-/* LISTA DEL MENU */         
+        background-color: #020f14;}}      
 #list{                    
     display: flex; 
     align-items: center;
@@ -122,21 +100,15 @@ p{
     gap: 3rem;
     margin: 0px;
     width: auto;
-    height: auto;
-}
+    height: auto;}
 #menu ul{
-    padding: 0px;
-}
+    padding: 0px;}
 #menu ul li{
     list-style: none;
     transition: 300ms scale ease-in-out;
 
     &:hover{
-        scale:1.1;
-    }
-}
-
-
+        scale:1.1;}}
 #menu ul li a{
     text-decoration: none;
     color: #053B50;
@@ -144,20 +116,14 @@ p{
     &:hover{
         color: #041b25;
         text-shadow: 0px 0px 1rem #cccc;
-        transition: color 300ms ease-out, text-shadow 300ms ease-out;
-    }
-}
-
-
-/* PRSENTACION (FOTO, BOTONES DE REDES Y CONTACTO)*/
+        transition: color 300ms ease-out, text-shadow 300ms ease-out;}}
 #section-info{
-    margin-top: 9rem;
+    margin-top: 10rem;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    justify-content: center;}
 #info{
     min-width: 45vw;
     display: flex;
@@ -165,54 +131,39 @@ p{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: .5rem;
-}
- /*DATOS DEL PERFIL*/ 
+    gap: .5rem;}
 #data h1{
     font-size: 3rem;
-    margin: 0px;
-}
+    margin: 0px;}
 #data h2{
     margin: 0px;
-    font-size: 2rem;
-}
+    font-size: 2rem;}
 #data p{
-    font-size: 1rem;
-}
-/* FOTO DE PERFIL */
+    font-size: 1rem;}
+
 #photo-profile{
     border-radius: 1.5rem;
     box-shadow: 0px 0px 1.5rem #cccc;
     cursor: pointer;
     transition: scale 100ms ease-in-out, box-shadow 300ms ease-in-out;
     overflow: hidden;
-    width: 144px;
-    height: 163px;
+    width: 163px;
+    height: 182px;
     aspect-ratio: 1/1.2;
 
     &:hover{
         scale:1.3;
         box-shadow: 0px 0px 2rem #bbbbbb;
-        transition-duration:scale 300ms, box-shadow 300ms;
-    }
-}
+        transition-duration:scale 300ms, box-shadow 300ms;}}
 
 #profile-photo-id{
     transition: scale 100ms ease-in-out;
-    width: 144px;
-    height:163px;
+    width: 163px;
+    height:182px;
 
     &:hover{
         scale: 1.2;
-        transition-duration: scale 300ms;
-    }
-}
-
-#box-foto{
-    width: 20%;
-    height: 20%;   
-}
-/*BOTONES DE DATOS DEL PERFIL*/
+        transition-duration: scale 300ms;}}
 
 .data-btns{
     display: flex;
@@ -227,13 +178,12 @@ p{
 
     &:hover{
         scale: 1.1;
-        background-color: #e0e0e0cc;
-    }
-}
+        background-color: #e0e0e0cc;}}
 .img-social-media-btns{
     width: 30px;
-    height: 30px;
-}
+    height: 30px;}
+.img-social-style{
+    padding: .5rem .3rem;}
 #btn-Mail{
     font-family: SairaCondense, sans-serif;
     font-size: 1rem;
@@ -241,23 +191,21 @@ p{
     align-items: center;
     gap: .2rem;
     background-color: #176B87;
-    color: #EEEEEE;
-}
-
+    color: #EEEEEE;}
 #data{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 65%;
-    gap: 1rem;
-}
+    gap: 1rem;}
 #data-info{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     width: 100%;
     height: auto;
-}
+    min-height: 17vh;}
 .buttons{
     display: flex;
     flex-direction: row;
@@ -267,10 +215,7 @@ p{
     align-items: center;
     width: 100%;
     height: auto;
-    gap: 1.5rem;
-}
-
-
+    gap: 1.5rem;}
 .message-Mail{
     font-family: SairaCondense, sans-serif;
     position: absolute;
@@ -280,9 +225,7 @@ p{
     border-radius: .3rem;
     z-index: 1;
     pointer-events: none;
-    display: none;
-}
-/*ESTILO GENERAL SECCIONES*/
+    display: none;}
 #section-about{
     width: 100%;
     height: auto;
@@ -290,13 +233,13 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 3rem;
-}
-#about{
+    margin: 4rem 0 4rem;}
+
+    #about, #project-boxes-container,#technology, #experience, #education, #data-contact{
     width: 45vw;
 }
 
-/* projects */
+
 #section-projects-background{
     display: flex;
     justify-content: center;
@@ -308,24 +251,20 @@ p{
     background-attachment: fixed;
     color: white;
     box-shadow: inset 0 10px 10px -10px #041b25,
-                inset 0 -10px 10px -10px #041b25;
-}
+                inset 0 -10px 10px -10px #041b25;}
 #project-boxes-container{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 45vw;
     gap: 1rem;
-    /*padding: 2rem 0 4rem 0;*/
-}
+    padding: 2rem 0 2rem 0}
 #title-section-prj{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
     width: 100%;
-    height: 10vh;
-}
+    height: 10vh;}
 .project-boxes{
     display: flex;
     flex-wrap: wrap;
@@ -334,9 +273,7 @@ p{
     width: 100%;
     height: auto;
     margin: 0 0 3rem;
-    gap: 3rem;
-    
-}
+    gap: 3rem;}
 .project{
     display: flex;
     flex-direction: column;
@@ -352,19 +289,15 @@ p{
 
     &:hover{
         scale: 1.07;
-        box-shadow: 0px 0px 1.5rem #020f14;
-    }
-}
+        box-shadow: 0px 0px 1.5rem #020f14;}}
 .project-box-description{
     margin: 0 2rem 1rem;
     font-size: large;
     font-weight: 500;
-    word-spacing: .1rem;
-}
+    word-spacing: .1rem;}
 .div-img-project{
     overflow: hidden;
-    width:auto;
-}
+    width:auto;}
 .project img{
     cursor: pointer;
     transition: scale 100ms ease-out;
@@ -373,18 +306,14 @@ p{
 
     &:hover{
         scale: 1.1;
-        transition-duration: 300ms;
-    }
-}
+        transition-duration: 300ms;}}
 .img-project{
     width: 450px;
-    height: 300px;
-}
+    height: 300px;}
 .title-prj{
     font-size: 1.8rem;
     width: auto;
-    height: auto;
-}
+    height: auto;}
 #labels{
     display: flex;
     flex-direction: row;
@@ -392,15 +321,15 @@ p{
     justify-content: center;
     align-items: center;
     gap: .5rem;
-}
 
-#labels>label{
-    padding: 0rem .7rem 0rem .5rem;
-    border-radius: 1rem;
-    background-color: rgb(238, 238, 238, 0.6);
-    color: #053b50;
-    font-style: italic;
-}
+    label{
+        padding: 0rem .7rem 0rem .5rem;
+        border-radius: 1rem;
+        background-color: rgb(238, 238, 238, 0.6);
+        color: #053b50;
+        font-style: italic;}
+    }
+
 .div-labels-btns{
     display: flex;
     flex-wrap: wrap;
@@ -409,18 +338,18 @@ p{
     justify-content: center;
     align-content: center;
     width: 100%;
-    height: 7vh;
+    height: auto;
     gap: 4rem;
-}
+    padding: 1rem 0 1rem;}
 .div-btns-projects{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: .5rem;
-}
-.div-btns-projects button{
-    display: flex;
+    
+    button{
+        display: flex;
     align-items: center;
     justify-content: center;
     height: 1.7vw;
@@ -429,36 +358,14 @@ p{
     background-color: #020f14;
     color: #cccc;
     cursor: pointer;
-    border: 0px;
-}
-#labels button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2rem;
-    border-radius: 2rem;
-    background-color: #020f14;
-    color: #cccc;
-    cursor: pointer;
-    border: 0px;
-    font-size: 1.2rem;
-}
-#labels button:first-of-type{
-    margin-left: 2.5rem;
-}
-/* Seccion de Tecnologias*/
+    border: 0px;}}
 #section-technology{
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 100%;
-    margin: 2rem 0 2rem;
-}
-
-#technology{
-    width: 45vw;
-}
+    margin: 4rem 0 5rem;}
 .tec-box{
     display: flex;
     align-items: center;
@@ -473,8 +380,7 @@ p{
     border-radius: 1rem;
     box-shadow: inset 0px 0px 1rem #a5a1a1;
     background: linear-gradient( to right, #EEEEEE, #dbdbdb);
-    transition: all 0.5s ease-in-out
-}
+    transition: all 0.5s ease-in-out}
 .tec-box img{
     width: 80px;
     height: 80px;
@@ -483,18 +389,13 @@ p{
 
     &:hover{
         scale:1.2;
-        transition-duration: 100ms;}
-}
-
+        transition-duration: 100ms;}}
 #description-tec{
     height: auto;
     opacity: 1;
     transition: all 0.5s ease-in-out;   
     padding: 1rem;
-    text-align: center;
-}
-/* Seccion de SoftSkills*/
-
+    text-align: center;}
 #softskill-lang{
     display: flex;
     justify-content: center;
@@ -506,12 +407,9 @@ p{
     box-shadow: inset 0 0 4rem .4rem #52d575;
     height: auto;
     width: 100%;
-    margin: 3rem 0 2rem;
-}
+    margin: 3rem 0 3rem;
 
-#softskill-lang h2{
-    margin: 0px;
-}
+    h2{margin: 0px;}}
 #soft-lang{
     width: 45vw;
     height: 100%;
@@ -522,49 +420,36 @@ p{
     align-content: center;
     justify-content: space-around;
     gap: 1rem;
-    margin: 2rem 0 2rem;
-}
-
+    margin: 2rem 0 2rem;}
 .soft-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: auto;
-}
 
-.soft-box ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    padding: 0px;
-    margin: 0px;
-}
+    ul{ display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 0px;
+        margin: 0px;}
 
-.soft-box ul li{
-    list-style: none;
-    background-color:rgb(238, 238, 238, .6);
-    padding: .2rem .8rem .2rem .6rem;
-    border-radius: 1rem;
-    color: #053b50;
-    font-size: 1.1rem;
-    font-style: italic;
-    
-}
-
-/*experience*/
+    ul li{  list-style: none;
+            background-color:rgb(238, 238, 238, .6);
+            padding: .2rem .8rem .2rem .6rem;
+            border-radius: 1rem;
+            color: #053b50;
+            font-size: 1.1rem;
+            font-style: italic;}}
 #section-experience{
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 100%;
-}
-#experience{
-    width: 45vw;
-}
+    margin: 3rem 0 3rem;
+    width: 100%;}
 .title-date{
     display: flex;
     flex-direction: column;
@@ -575,12 +460,11 @@ p{
     border: 1px solid #cccc;
     border-radius: .7rem;
     box-shadow: 0px 0px .5rem #cccc;
+
+    h3{margin-left: .7rem;}
 }
-
 .box-description{
-    display: none;
-} 
-
+    display: none;} 
 .box-description-style{
   padding: 1rem;
   border-radius: 0px 0px .5rem .5rem;
@@ -594,64 +478,40 @@ p{
   justify-content: center;
   gap: 1vh;
 
-    & label{
-        color: white;
-    }
-}
-
-.title-date h3{
-    margin-left: .7rem;
-}
+    label{color: white;}}
 .label-button{
     display: flex;
     align-items: center;
-    gap: .5rem;
-}
+    gap: .5rem;}
 .title-date-label{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 5vh;
+    height: auto;
     width: 100%;
-}
+    padding: .5rem 0 .5rem;}
 .btn-style-description{
     border: none;
     border-radius: 0.5rem;
     margin-right: .7rem;
-    cursor: pointer;
-}
-
+    cursor: pointer;}
 .img-dots-blue, .img-up-blue{
     filter: brightness(0%) saturate(200%) hue-rotate(200deg);
     transition: scale 300ms ease-in-out, box-shadow 300ms ease-in-out;
     border-radius: 2rem;
     &:hover{
         scale:1.2;
-        box-shadow: 0px 0px 1px #ccc;
-        
-    }
-}
-
-/*Education*/
+        box-shadow: 0px 0px 1px #ccc;}}
 #section-education{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 3rem 0;
-}   
-#education{
-    width: 45vw;
-}
+    margin: 2rem 0 3rem 0;}   
 .label-button label{
-    font-size: 1rem;
-}
+    font-size: 1rem;}
 #education>div:first-of-type{
-    margin-bottom: 2rem;
-}
-
-/* contact */
-
+    margin-bottom: 2rem;}
 #contact{
     display: flex;
     align-items: center;
@@ -659,14 +519,13 @@ p{
     background-color: #041b25;
     color: white;
     height: 20vh;
+    padding: 2rem 0 2rem;
 }
 
 #data-contact{
-    width: 45vw;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-}
+    flex-direction: column;}
 .title-contact{
     width: 100%;
     height: auto;
@@ -674,9 +533,7 @@ p{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 1rem;
-}
-
+    margin-bottom: 1rem;}
 .bts-Contact{
     display: flex;
     align-items: center;
@@ -685,11 +542,9 @@ p{
     flex-wrap: wrap;
     width: 100%;
     height:auto;
-    gap: 1.5vw;
-}
-
+    gap: 1.5vw;}
 .style-btns{
-    height: 4vh;
+    height: auto;
     background: #74E291;
     border-radius: 50%;
     border: none;
@@ -706,13 +561,8 @@ p{
         box-shadow: 0px 0px .3rem #b4e2c0 ;
         background-color: #48df70 ;
         box-shadow: 0px 0px .2rem #b4e2c0;
-        transition-duration: 200ms
-    }
-
-}
-
+        transition-duration: 200ms}}
 .mail{
-    
     font-family: SairaCondense, sans-serif;
     background-color: #dbdbdb;
     color: #053B50;
@@ -721,26 +571,21 @@ p{
     font-style: italic;
     border: none;
     pointer-events: none;
-    display: none;
-}
+    display: none;}
 
-.prueba{ /*resolver*/
-    display: none !important;
-}
+.display-none{
+    display: none !important;}
 
 .display-block{
-    display: block !important;
-}
+    display: block !important;}
+
 /*/////////////////////Night Mode////////////////////*/
 
 .night-mode{
     background-color: #100f29;
     color: white ;
-    transition: all 300ms ease-out !important;
-
-}
+    transition: all 300ms ease-out !important;}
 .night-mode-Night-Btn{
-
     background-color: #100f29;
     border: 1px solid #74e291 ;
     box-shadow: none;
@@ -749,30 +594,22 @@ p{
     &:hover{
 
         background-color: #EEEEEE !important;
-        transition: 300ms ease-out !important
-    }
-}
+        transition: 300ms ease-out !important}}
 .night-mode-translate-btn{
     background-color:#4f4d8a !important;
     border: 1px solid #52d575;
     color: white;
     box-shadow: none;
     transition: background-color 100ms ease-in;
-
     &:hover{
 
         background-color: #100f29 !important;
-        transition: 300ms ease-out;
-    }
-
-}
+        transition: 300ms ease-out;}}
 .night-mode-Head{
     background-color: #100f29 !important;
     border-bottom: .01rem solid #52d575 !important;
     box-shadow: none !important;
-    transition: all 300ms ease-out !important;
-}
-
+    transition: all 300ms ease-out !important;}
 .night-mode-A{
     color: #74e291 !important;
     
@@ -782,55 +619,38 @@ p{
         text-shadow: 0px 0px 1rem #1b7533 !important;
         transition: all 300ms ease-out !important;
     }
-    transition: 300ms ease-out !important;
-}
-
+    transition: 300ms ease-out !important;}
 .night-mode-Photo{
      box-shadow: 0px 0px 1rem #01141c;
      transition: all 300ms ease-out !important;}
-
 .night-mode-prj-background{
     background: linear-gradient(to top, #100f29, #4f4d8a, #100f29)!important;
     box-shadow: inset 0 10px 10px -10px #100f29, 
                 inset 0 -10px 10px -10px #100f29  !important;
     background-attachment: fixed !important;
-    transition: all 300ms ease-out !important;
-    
-}
+    transition: all 300ms ease-out !important;   }
 .night-mode-prj{
     background-color: #4a487d !important;
     color: white !important; 
-    transition: all 100ms ease-out
-}
-
+    transition: all 100ms ease-out}
 .night-mode-tec-box{
     background: linear-gradient(to right, #4f4d8a, #5f5d9c) !important;
     border: .3rem solid #74e291 !important;
     box-shadow: inset 0px 0px 1rem #100f29 !important;
-    transition: all 300ms ease-out !important;
-}
-
+    transition: all 300ms ease-out !important;}
 .night-tec-img{
-    filter:hue-rotate(330deg) saturate(9) brightness(1) !important;
-}
-
+    filter:hue-rotate(330deg) saturate(9) brightness(1) !important;}
 .night-mode-skill{
     color: #4f4d8a !important;
-    transition: all 300ms ease-out !important;
-}
-
+    transition: all 300ms ease-out !important;}
 .night-mode-exp-box{
     border: 1px solid #5f5d9c !important;
     box-shadow: 0px 0px .5rem #29284f !important;
-    transition: all 300ms ease-in-out !important;
-}
-
+    transition: all 300ms ease-in-out !important;}
 .night-mode-exp-box-txt{
     background-image: linear-gradient(to top, #29284f, #29284f) !important;
     border-top: 1px solid #5f5d9c !important;
-    transition: all 300ms ease-in-out !important;
-}
-
+    transition: all 300ms ease-in-out !important;}
 .night-btns-social-media{
     background-color: #5f5d9c !important;
     box-shadow: none !important;
@@ -838,201 +658,121 @@ p{
     &:hover{
 
         background-color: #100f29 !important;
-        box-shadow: none !important;
-        
-    }
-}
+        box-shadow: none !important;   }}
 .night-btns-data{
     background-color: #100f29 !important;
     box-shadow: none !important;
     border: 0.1rem solid #52d575 !important;
 
     &:hover{
-        box-shadow: none !important;
-    }
-}
-
+        box-shadow: none !important;}}
 .night-btn-mail{
     background-color: #5f5d9c !important;
     border: none !important;
     box-shadow: none !important;
-    
 
     &:hover{
-        box-shadow: none !important;
-    }
-}
+        box-shadow: none !important;}}
 .img-night-btns-social-media{
-    filter: invert(100%) brightness(200%);
-}
+    filter: invert(100%) brightness(200%);}
 
 .night-mode-photo-profile{
     box-shadow: none !important;
 
     &:hover{
-
-        box-shadow: none !important;
-    }
-}
-
+        box-shadow: none !important;}}
 .night-mode-msj-copy-mail{
     background-color: #52d575 !important;
-    color: #100f29;
-}
+    color: #100f29;}
 
 /*// Media Query ////*/
 
 @media (1201px <= width <= 1400px){
     #info, #about, #project-boxes-container, #technology,
     #soft-lang, #experience, #education, #data-contact{
-        width: 60vw;
-    }
+        width: 60vw;}
     .div-btns-projects button{
         width: 2.2vw;
-        height: 2.2vw;
-    }
-    .style-btns{
-        height: 3vw;
-    }
-}
+        height: 2.2vw;}}
 
 @media (1025px <= width <= 1200px){
     #info, #about, #project-boxes-container, #technology,
     #soft-lang, #experience, #education, #data-contact{
-        width: 65vw;
-    }
-    #section-info{
-        margin-top: 8rem;
-    }
+        width: 65vw;}
     .div-btns-projects button{
         width: 2.6vw;
-        height: 2.6vw;
-    }
-    .style-btns{
-        height: 3.7vw;
-    }
+        height: 2.6vw;}
     .div-labels-btns{
-        gap: 2rem;
-    }
+        gap: 2rem;}
 }
 
 @media(768px <= width <= 1024px){
     h2{
-        font-size: 2rem;
-    }
+        font-size: 2rem;}
     #data h1{
-        font-size: 2.5rem;
-    }
+        font-size: 2.5rem;}
     #info, #about, #project-boxes-container, #technology,
     #soft-lang, #experience, #education, #data-contact{
-        width: 80vw;
-    }
+        width: 80vw;}
     #list{
-        gap: 1.5rem;
-    }
-    #section-info{
-        margin-top: 7rem;
-    }
+        gap: 1.5rem;}
     .title-prj{
-        font-size: 1.5rem;
-    }
+        font-size: 1.5rem;}
     .div-btns-projects button{
         width: 3.5vw;
-        height: 3.5vw;
-    }
-    .style-btns{
-        height: 5vw;
-    }
+        height: 3.5vw;}
     .div-labels-btns{
-        gap: 1.5rem;
-    }   
-}
+        gap: 1.5rem;}}
 @media(481px <= width <= 767px){
     h2{
-        font-size: 1.5rem;
-    }
+        font-size: 1.5rem;}
     p{
-        font-size: 1.1rem;
-    }
-    #data h1{
-        font-size: 2.5rem;
-    }
+        font-size: 1.1rem;}
     .title-date h3{
-        font-size: 1rem;
-    }
+        font-size: 1rem;}
     #info, #about,#project-boxes-container, #technology,#soft-lang, #experience, 
     #education, #data-contact{
-        width: 80vw;
-    }
+        width: 80vw;}
     #data{
         width: 100%;
-    }
+        h1{
+            font-size: 2.5rem;}}
     #data-info{
-        align-items: center;
-    }
+        align-items: center;}
     .buttons{
-        flex-direction: column;
-        gap: 1.3rem;
-    }
+        justify-content: center;
+        gap: 1.3rem;}
     #list{
-        gap: 1.5rem;
-    }
+        gap: 1.5rem;}
     #title-section-prj{
-        height: 7vh;
-    }
-    #section-info{
-        height: 45vh;
-        margin-top: 4rem;
-    }
+        height: 7vh;}
     #section-about{
-        flex-direction: column;
-        margin: 0 0 2rem;
-        min-height: 30vh;
-    }
+        flex-direction: column;}
     #project-boxes-container{
         gap: 0;
-        align-items: center;
-    }
+        align-items: center;}
     .project-boxes{
         flex-direction: column;
-        width: 80%;
-    }
+        width: 80%;}
     .tec-box img{
         width: 60px;
-        height: 60px;
-    }
+        height: 60px;}
     #description-tec-container{
         height: 23vh;
-        padding: .5rem;
-    }
-   
+        padding: .5rem}
     .div-btns-projects button{
         width: 6vw;
-        height: 6vw;
-    }
-    .style-btns{
-        height: 5vh;
-    }
+        height: 6vw;}
     .div-labels-btns{
-        gap: 1.5rem;
-    }
+        gap: 1.5rem;}
     #menu ul{
-        display: none;
-    }
+        display: none;}
 }
 @media(340px <= width <= 480px){
     h2{
-        font-size: 1.5rem;
-    }
+        font-size: 1.8rem;}
     p{
-        font-size: 1.1rem;
-    }
-    #data h1{
-        font-size: 2rem;
-    }
-    #data h2{
-        font-size: 1.5rem;
-    }
+        font-size: 1.1rem;}
     .title-date h3{
         font-size: 1rem;
     }
@@ -1043,72 +783,50 @@ p{
     #data{
         width: 100%;
         gap: .7rem;
-    }
+
+        h1{
+            font-size: 2.2rem;}
+        h2{
+            font-size: 1.5rem;}}
     #data-info{
         min-height: 17vh;
         align-items: center;
     }
     .buttons{
-        flex-direction: column;
         gap: 1.3rem;
-    }
+        justify-content: center;}
     #list{
-        gap: 1.5rem;
-    }
+        gap: 1.5rem;}
     #title-section-prj{
-        height: 7vh;
-    }
+        height: 7vh;}
     .title-prj{
-        font-size: 1rem;
-    }
-    #section-info{
-        height: auto;
-        margin-top: 4rem;
-    }
+        font-size: 1rem;}
     #section-about{
-        flex-direction: column;
-        margin: 2rem 0 2rem;
-        min-height: 30vh;
-    }
-   
+        flex-direction: column;}
     #project-boxes-container{
-        gap: 0;
-        align-items: center;
-    }
+        align-items: center;}
     .project-boxes{
         flex-direction: column;
         width: 80%;
-        gap: 2rem;
-    }
+        gap: 2rem;}
     .label-button label{
-        display: none;
-    }
+        display: none;}
     #labels>label{
-        font-size: .7rem;
-    }
+        font-size: .7rem;}
     .tec-box img{
         width: 45px;
-        height: 45px;
-    }
+        height: 45px;}
     #description-tec-container{
         height: 23vh;
-        padding: .5rem;
-    }
+        padding: .5rem;}
     .div-btns-projects button{
         width: 7vw;
-        height: 7vw;
-    }
-    .style-btns{
-        height: 6vh;
-    }
+        height: 7vw;}
     .div-labels-btns{
         gap: .5rem;
-        flex-direction: column;
-    }
+        flex-direction: column;}
     #menu ul{
-        display: none;
-    }
+        display: none;}
     .bts-Contact{
-        gap: 1.5rem;
-    }
+        gap: 1.5rem;}
 }

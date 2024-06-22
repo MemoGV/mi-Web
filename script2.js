@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             id.classList.toggle(className)}}
             
     const nightModeClass=()=>{
-        toggleClass(imgDarkMode,'prueba')
+        toggleClass(imgDarkMode,'display-none')
         toggleClass(imgLightMode, 'display-block')
         toggleClass(header, 'night-mode-Head' )
         toggleClass(nightBtnStyle, 'night-mode-Night-Btn')
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             third :'Experiencia', 
             fourth:'Educacion'},
         profilePhoto:`<img id="profile-photo-id" src="./assets/profile-photo.webp" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />`,
-        name:'Guillermo E Garcia Vega',
+        name:'Guillermo Garcia Vega',
         title:'Desarrollador Web',
         location:'Tamaulipas, Mexico.',
         section1:{
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             third :'Experience', 
             fourth:'Education'},
         profilePhoto:`<img id="profile-photo-id" src="./assets/profile-photo.webp" width="144" height="163" alt="Foto de Perfil" title="Foto de perfil" />`,
-        name:'Guillermo E Garcia Vega',
+        name:'Guillermo Garcia Vega',
         title:'Fronted Developer',
         location:'Tamaulipas, Mexico.',
         section1:{
