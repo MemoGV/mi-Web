@@ -1,4 +1,4 @@
-/*FUENTES*/
+
 @font-face{
     font-family: Ibmfont;
     src:url('./assets/fonts/IBMPlexMono-Regular.ttf') format('ttf'),
@@ -13,7 +13,7 @@
     opacity: 1;
     transition: all 200ms ease-in-out;
 }
-/*ESTILOS GENERALES*/
+
 body{
 font-family:SairaCondense, sans-serif;
 background-color:#EEEEEE;
@@ -30,9 +30,6 @@ p{  word-spacing: .2rem;
     text-align: left;
     font-weight: 500;
     margin: 0px;}
-
- /*PARTE SUPERIOR DE LA WEB (MENU, PRESENTACION)*/
-
 #head{  
     display: flex;
     align-items: center;
@@ -52,11 +49,11 @@ p{  word-spacing: .2rem;
     width: 80%;
     justify-content: center;
     gap: 1rem;}
-#menu{                /* MENU FLOTANTE */
+#menu{                
     width: 60vw;
     font-size: 1.1rem;   
     font-weight: 900;      }
-.menu-btn{                  /*ESTILO GENERAL CLASE DE BOTON*/
+.menu-btn{                  
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 2rem;
