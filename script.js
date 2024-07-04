@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const btnsPage = document.querySelectorAll('.btns-page')
             btnsPage.forEach(btn =>{
                 btn.addEventListener('click',()=>{
-                    if(btn.id === 'btn-github-contact' || btn.id === 'btn-Github'){ 
+                    if(btn.id === 'btn-github-contact' || btn.id === 'btn-Github' || btn.id === 'btn-github-project'){ 
                         window.open('https://github.com/MemoGV', '_blank')
                         
                     }else if(btn.id === 'btn-linkedin-contact' || btn.id === 'linkedin'){
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 msj.style.display='block';
                 setTimeout(()=>{
                     msj.style.display='none';}, 1200)})})}
-        downloadCv(){
-            const urlPDF = "./CV/Guillermo_Garcia_CV.pdf";
+        downloadCv(){     
+            const urlPDF = title.textContent === 'Desarrollador Web'? "./CV/Ing_Guillermo_Garcia_Vega_CV.pdf" : './CV/Ing_Guillermo_Garcia_Vega_CV_EN.pdf';
             const linkDescarga = document.createElement('a');
             linkDescarga.href = urlPDF;
             linkDescarga.target = '_blank';
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             animaciones y posicionamiento en CSS, para poder crear mejores interfaces web atractivas y funcionales.`},
         {   name:'javascript',
             txt:`Tengo una base solida de conocimiento en JavaScript, abarcando una comprensión de los conceptos fundamentales del lenguaje
-             y estoy familiarizado con el uso de objetos, sus métodos y propiedades.`},
+            y estoy familiarizado con el uso de objetos, sus métodos y propiedades.`},
         {   name:'github',
             txt:`Estoy familiarizado con el uso de Git y GitHub, lo que incluye la capacidad de gestionar repositorios, 
             realizar seguimiento de cambios, manejar ramas, fusionar código y colaborar eficientemente en proyectos.`}]
@@ -181,12 +181,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             txt:`Experienced in HTML and familiar with its syntax, capable of creating web page structures using various tags. The HTML of this web page exemplifies my skills.`},
         {   name:'css',
             txt:`Knowledgeable in CSS, including design with Flexbox and Grid, continually learning advanced techniques in design, animations,
-             and positioning to create more attractive and functional web interfaces.`},
+            and positioning to create more attractive and functional web interfaces.`},
         {   name:'javascript',
             txt:`Solid foundation in JavaScript, with an understanding of fundamental concepts and familiarity with using objects, their methods, and properties.`},
         {   name:'github',
             txt:`Familiar with using Git and GitHub, including managing repositories, tracking changes, handling branches, merging code, and collaborating efficiently on projects.`}]
-     
+
     imgTec.forEach((imgTec, index)=>{
         imgTec.addEventListener('mouseover',()=>{
             tecDescription.style.opacity = 0
@@ -239,25 +239,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         location:'Tamaulipas, Mexico.',
         section1:{
             title:'Sobre Mi',
-            description:`Ingeniero industrial con experiencia en edición de videos para plataformas digitales y un fuerte interés en el cine, los deportes y la tecnología.
-            Durante el último año, me he dedicado a estudiar programación con la meta de desarrollar una carrera en este ámbito. Busco oportunidades en programación 
-            donde pueda aplicar mis habilidades analíticas y creativas para contribuir en grandes proyectos.`},
+            description:`Ingeniero industrial con experiencia en edición de videos para plataformas digitales y un gran interés en el cine, los deportes y la tecnología.
+            Durante el último año, me he dedicado a estudiar de manera autodidacta programación con la meta de desarrollar una carrera en este ámbito; JavaScript, CSS y HTML son las 
+            tecnologías que más domino. Poder crear algo, y verlo hacerse realidad frente a mí es lo que me impulso aprender programación. Me gustan los desafíos y aprender cosas nuevas,
+            creo que nunca es suficiente y cada día se crean cosas nuevas por aprender. Disfruto de ver películas de ciencia ficción, drama o anime; 'Naruto' un anime que recomiendo.
+            `},
         section2:{
             title:'Proyectos',
             firstProject:{
-                prjName:'nombre 1',
+                prjName:'Soon',
                 tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
-                description:`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et arcu in dolor mattis tristique. Donec tristique augue elit, eget finibus lorem
-                 posuere id. Suspendisse at commodo nibh. Morbi eget mauris a ipsum vulputate faucibus et at libero. Praesent lacinia magna sed leo varius mollis vitae vitae urna. 
-                 Morbi pharetra dictum nulla, eget aliquet quam faucibus a. Pellentesque fringilla id massa sollicitudin tristique. Mauris finibus, metus ac faucibus rhoncus, 
-                 eros metus rutrum neque, vel ultricies arcu tellus porta ante. Maecenas a condimentum tortor.`},
-            secondProject:{
-                prjName:'nombre 2',
-                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
-                description:`descripcion proyiecto 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et arcu in dolor mattis tristique. Donec tristique augue elit, eget finibus lorem
-                 posuere id. Suspendisse at commodo nibh. Morbi eget mauris a ipsum vulputate faucibus et at libero. Praesent lacinia magna sed leo varius mollis vitae vitae urna. 
-                 Morbi pharetra dictum nulla, eget aliquet quam faucibus a. Pellentesque fringilla id massa sollicitudin tristique. Mauris finibus, metus ac faucibus rhoncus, 
-                 eros metus rutrum neque, vel ultricies arcu tellus porta ante. Maecenas a condimentum tortor.`}},
+                description:`Descripcion Proyecto`}},
         section3:{
             title:'Tecnologias',
             subTitle:'Conocimientos',
@@ -314,19 +306,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
         location:'Tamaulipas, Mexico.',
         section1:{
             title:'About Me',
-            description:`Experienced industrial engineer skilled in digital video editing platforms, passionate about cinema, sports, 
-            and technology. Over the past year, I've been studying programming to pursue a career in this field. Seeking opportunities 
-            where my analytical and creative skills can contribute to significant projects in programming.`},
+            description:`I'm an industrial engineer with experience in video editing for digital platforms and a strong interest in cinema, sports, and technology.
+            Over the past year, I've been self-studying programming to build a career in this field. I'm proficient in JavaScript, CSS, and HTML. Creating something 
+            and seeing it come to life is what drives my passion for programming. I enjoy challenges and constantly learning new things. Watching science fiction, 
+            drama, or anime movies is a favorite pastime; I highly recommend "Naruto."`},
         section2:{
             title:'Projects',
             firstProject:{
-                prjName:'name 1',
+                prjName:'Soon',
                 tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
-                description:`project description 1.`},
-            secondProject:{
-                prjName:'name 2',
-                tags:{tag1:'HTML', tag2:'CSS', tag3:'JavaScript'},
-                description:`project description 2`}},
+                description:`project description 1.`}},
         section3:{
             title:'Technology',
             subTitle:'Knowledge',
@@ -364,7 +353,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     degree:`Bachelor's Degree in Industrial Engineering`,
                     date:'Ago 2012 - Dic 2017',
                     descripcion: `Throughout my engineering studies, I gained skills in planning and evaluating projects over short, medium, and long terms, as well as in
-                     processes and measurements for continuous improvement. `  }  }    },
+                    processes and measurements for continuous improvement. `  }  }    },
         section7:'Contact'}
     
         const printDataCV=(obj)=>{

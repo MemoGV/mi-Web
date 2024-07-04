@@ -279,6 +279,7 @@ p{  word-spacing: .2rem;
     overflow: hidden;
     height: auto;
     width: 100%;
+    max-width: 60%;
     box-shadow: 0px 7px 1rem #020f14;
     border-radius: 1rem;
     background-color: #053B50;
